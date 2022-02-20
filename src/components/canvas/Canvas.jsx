@@ -60,7 +60,7 @@ const Canvas = ({ theme }) => {
         c.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
         c.fillStyle = this.color;
         c.shadowColor = this.color;
-        c.shadowBlur = 25;
+        c.shadowBlur = 15;
         c.fill();
         c.closePath();
       }
