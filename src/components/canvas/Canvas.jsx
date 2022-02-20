@@ -92,7 +92,7 @@ const Canvas = ({ theme }) => {
     let alpha = 1;
     function animate() {
       requestAnimationFrame(animate);
-      c.fillStyle = theme.palette.primary;
+      c.fillStyle = "#1C202D";
       c.fillRect(0, 0, canvas.width, canvas.height);
 
       c.fillText("HTML CANVAS BOILERPLATE", mouse.x, mouse.y);

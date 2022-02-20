@@ -1,12 +1,18 @@
 import React from "react";
-import { AppBar, Toolbar, IconButton, Typography, Button, Box } from "@mui/material";
+import {
+  AppBar,
+  Toolbar,
+  IconButton,
+  Typography,
+  Button,
+  Box,
+} from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
-
 
 const Navbar = () => {
   return (
     <Box className="navbar">
-      <AppBar position="static">
+      <AppBar position="relative" sx={{ mt: "-30px" }}>
         <Toolbar>
           <IconButton
             size="large"

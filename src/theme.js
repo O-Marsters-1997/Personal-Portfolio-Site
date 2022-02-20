@@ -8,13 +8,20 @@ import CabinWoff2 from "./assets/fonts/cabin-v18-latin-regular.woff2";
 
 import RalewayWoff2 from "./assets/fonts/raleway-v26-latin-regular.woff2";
 
-const theme = createTheme({
+// Initialising the theme so that I can access the colours later
+let theme = createTheme({
   palette: {
     primary: {
       main: "rgba(28, 32, 45,1)",
     },
     secondary: {
       main: "rgba(240, 167, 81, 1)",
+    },
+
+    text: {
+      // Off white
+      primary: "rgba(242, 242, 242,1)",
+      accent: "rgba(240, 167, 81, 1)",
     },
     stars: {
       one: "rgba(240, 167, 81, 1)",
@@ -23,10 +30,15 @@ const theme = createTheme({
       four: "rgba(255, 255, 255, 1)",
     },
   },
+});
+
+// Update the theme so that more values can be added on top of it
+theme = createTheme(theme, {
   typography: {
     fontFamily: "Cabin, Arial",
   },
   components: {
+    // CSS Baseline for font face (self host fonts)
     MuiCssBaseline: {
       styleOverrides: `
       @font-face {
@@ -47,6 +59,16 @@ const theme = createTheme({
                 url(${CabinWoff2}) format('woff2');
         }
       `,
+    },
+    // Button components
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          color: theme.palette.text.primary,
+          borderRadius: "10px",
+          border: `2px solid ${theme.palette.text.accent}`,
+        },
+      },
     },
   },
 });
