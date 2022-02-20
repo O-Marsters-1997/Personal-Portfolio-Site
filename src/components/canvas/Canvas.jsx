@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { styled } from "@mui/system";
-import utils from "../configJS/utils";
+import utils from "../../configJS/utils";
+import CanvasOverlay from "./CanvasOverlay";
 
 const Canvas = ({ theme }) => {
   useEffect(() => {
@@ -15,7 +16,9 @@ const Canvas = ({ theme }) => {
   };
 
   // Custom styles for creating the canvas element
-  const MyComponent = styled("canvas")({});
+  const MyComponent = styled("canvas")({
+    zIndex: -100,
+  });
 
   const renderCanvas = () => {
     const canvas = document.querySelector("canvas");

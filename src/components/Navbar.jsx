@@ -1,10 +1,11 @@
 import React from "react";
-import { AppBar, Toolbar, IconButton, Typography, Button } from "@mui/material";
+import { AppBar, Toolbar, IconButton, Typography, Button, Box } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
+
 
 const Navbar = () => {
   return (
-    <div>
+    <Box className="navbar">
       <AppBar position="static">
         <Toolbar>
           <IconButton
@@ -22,7 +23,7 @@ const Navbar = () => {
           <Button color="inherit">Login</Button>
         </Toolbar>
       </AppBar>
-    </div>
+    </Box>
   );
 };
 
