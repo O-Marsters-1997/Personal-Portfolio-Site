@@ -8,11 +8,11 @@ import {Box} from "@mui/material"
 
 const CanvasContainer = ({theme}) => {
     return (
-        <Box component ="div">
-            <Canvas theme={theme}></Canvas>
-            <CanvasOverlay/>
-        </Box>
-    )
+      <Box component="div">
+        <Canvas theme={theme}></Canvas>
+        <CanvasOverlay/>
+      </Box>
+    );
 }
 
 export default CanvasContainer

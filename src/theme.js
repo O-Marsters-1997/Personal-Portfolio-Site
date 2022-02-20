@@ -13,6 +13,7 @@ let theme = createTheme({
   palette: {
     primary: {
       main: "rgba(28, 32, 45,1)",
+      modifier: "rgba(95, 112, 139, 1)",
     },
     secondary: {
       main: "rgba(240, 167, 81, 1)",
@@ -35,7 +36,24 @@ let theme = createTheme({
 // Update the theme so that more values can be added on top of it
 theme = createTheme(theme, {
   typography: {
-    fontFamily: "Cabin, Arial",
+    h3: {
+      fontFamily: "Cabin, Arial",
+    },
+    h5: {
+      fontFamily: "Raleway, Arial",
+    },
+    button: {
+      fontFamily: "Raleway, Arial",
+    },
+  },
+  breakpoints: {
+    values: {
+      xs: 0,
+      sm: 600,
+      md: 900,
+      lg: 1200,
+      xl: 1536,
+    },
   },
   components: {
     // CSS Baseline for font face (self host fonts)
@@ -66,7 +84,8 @@ theme = createTheme(theme, {
         root: {
           color: theme.palette.text.primary,
           borderRadius: "10px",
-          border: `2px solid ${theme.palette.text.accent}`,
+          border: `.5px solid ${theme.palette.text.accent}`,
+          "&:hover": { border: `2px solid ${theme.palette.text.accent}` },
         },
       },
     },
