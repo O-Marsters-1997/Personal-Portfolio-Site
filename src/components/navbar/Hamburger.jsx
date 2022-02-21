@@ -3,16 +3,9 @@ import { Box } from "@mui/material";
 
 import { styled } from "@mui/system";
 
-const Hamburger = () => {
+const Hamburger = ({ onMobileClick }) => {
   const handleClick = () => {
-    let hamburgerLine = document.getElementById("hamburger-line");
-    if (hamburgerLine.classList.contains("hamburger-line-closed")) {
-      hamburgerLine.classList.remove("hamburger-line-closed");
-      hamburgerLine.classList.add("hamburger-line-open");
-    } else {
-      hamburgerLine.classList.add("hamburger-line-closed");
-      hamburgerLine.classList.remove("hamburger-line-open");
-    }
+    onMobileClick();
   };
 
   const MyHamburger = styled("div")(({ theme }) => ({
@@ -86,7 +79,9 @@ const Hamburger = () => {
     <MyHamburger
       component="div"
       className="hamburger-wrapper"
-      onClick={handleClick}
+      onClick={() => {
+        handleClick();
+      }}
     >
       <Box
         component="div"

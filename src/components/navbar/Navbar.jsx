@@ -9,16 +9,18 @@ import {
 } from "@mui/material";
 import { bgcolor, styled } from "@mui/system";
 import MenuIcon from "@mui/icons-material/Menu";
-import Hamburger from './Hamburger'
+import Hamburger from "./Hamburger";
 import Github from "../../assets/images/github-white.svg";
 import Linkedin from "../../assets/images/linkedin.svg";
 
-const Navbar = ({ theme }) => {
+const Navbar = ({ theme, onMobileClick }) => {
   const MyToolbar = styled("div")(({ theme }) => ({
+    width: "100vw",
     position: "relative",
     display: "flex",
     backgroundColor: theme.palette.primary.modifier,
     justifyContent: "flex-start",
+    boxShadow: "none",
 
     ".icon-wrapper": {
       marginLeft: "5%",
@@ -35,6 +37,9 @@ const Navbar = ({ theme }) => {
         "&:hover": {
           filter:
             "brightness(0) saturate(100%) invert(85%) sepia(28%) saturate(2489%) hue-rotate(322deg) brightness(102%) contrast(88%)",
+        },
+        [theme.breakpoints.down("md")]: {
+          paddingRight: "2em",
         },
       },
     },
@@ -65,7 +70,7 @@ const Navbar = ({ theme }) => {
 
   return (
     <Box className="navbar">
-      <AppBar position="relative" sx={{ mt: "-30px" }}>
+      <AppBar position="relative" sx={{ mt: "-30px", boxShadow: "none" }}>
         <MyToolbar>
           <Box component="div" className="icon-wrapper">
             <img src={Github}></img>
@@ -77,7 +82,7 @@ const Navbar = ({ theme }) => {
             <Typography variant="h5">contact</Typography>
             <Button color="inherit">CV</Button>
           </Box>
-          <Hamburger/>
+          <Hamburger onMobileClick={onMobileClick} />
         </MyToolbar>
       </AppBar>
     </Box>
