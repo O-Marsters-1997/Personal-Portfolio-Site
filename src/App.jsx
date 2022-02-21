@@ -1,7 +1,7 @@
 import "./styles/css/style.css";
 import { Route, Routes } from "react-router-dom";
 import theme from "./theme";
-import Navbar from "./components/Navbar";
+import Navbar from "./components/navbar/Navbar";
 import CanvasContainer from "../src/containers/CanvasContainer";
 import { ThemeProvider, Grid, CssBaseline } from "@mui/material";
 

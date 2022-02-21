@@ -9,11 +9,12 @@ import {
 } from "@mui/material";
 import { bgcolor, styled } from "@mui/system";
 import MenuIcon from "@mui/icons-material/Menu";
-import Github from "../assets/images/github-white.svg";
-import Linkedin from "../assets/images/linkedin.svg";
+import Hamburger from './Hamburger'
+import Github from "../../assets/images/github-white.svg";
+import Linkedin from "../../assets/images/linkedin.svg";
 
 const Navbar = ({ theme }) => {
-  const MyToolbar = styled("Appar")(({ theme }) => ({
+  const MyToolbar = styled("div")(({ theme }) => ({
     position: "relative",
     display: "flex",
     backgroundColor: theme.palette.primary.modifier,
@@ -47,6 +48,9 @@ const Navbar = ({ theme }) => {
       width: "50%",
       fontVariant: "small-caps",
       textTransform: "uppercase",
+      [theme.breakpoints.down("md")]: {
+        display: "none",
+      },
 
       "	.MuiTypography-root": {
         marginRight: ".8rem",
@@ -73,6 +77,7 @@ const Navbar = ({ theme }) => {
             <Typography variant="h5">contact</Typography>
             <Button color="inherit">CV</Button>
           </Box>
+          <Hamburger/>
         </MyToolbar>
       </AppBar>
     </Box>
