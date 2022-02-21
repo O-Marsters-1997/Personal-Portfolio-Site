@@ -11,7 +11,7 @@ const AboutMe = () => {
     padding: "5rem 0",
 
     ".MuiGrid-container": {
-      width: "clamp(250px, 75vw, 1850px)",
+      width: "clamp(250px, 75vw, 1250px)",
       margin: "0 auto",
     },
     ".MuiTypography-h3": {
@@ -58,7 +58,7 @@ const AboutMe = () => {
       },
 
       "&:hover .profile-image-overlay": {
-        backgroundColor: "transparent"
+        backgroundColor: "transparent",
       },
       img: {
         width: "80%",
@@ -100,26 +100,30 @@ const AboutMe = () => {
             <Box component="div" className="underline"></Box>
           </Typography>
         </Grid>
-        <Grid item xs={12}>
-          <Typography variant="body1">
-            Hi, my name is Olly. Having graduated with a degree in international
-            realtions, I decided to become a software developer because of the
-            transofrmational impact technology can have in people's lives.
-          </Typography>
-          <Typography variant="body1">
-            I constantly strive to improve my skills and the love the process of
-            learning new things. My key ares of interest include
-            <Box component="span">
-              UX, UI design, devops and full-stack web development
-            </Box>
-          </Typography>
-          <Typography variant="body1">
-            If you have any questions about my work, or have ideas about what we
-            can do together, don't hesitate to get in touch via the form below.
-            <ArrowDownwardIcon className="down-arrow" />
-          </Typography>
+        <Grid item xs={12} md={6}>
+          <Box component="div">
+            <Typography variant="body1">
+              Hi, my name is Olly. Having graduated with a degree in
+              international realtions, I decided to become a software developer
+              because of the transofrmational impact technology can have in
+              people's lives.
+            </Typography>
+            <Typography variant="body1">
+              I constantly strive to improve my skills and the love the process
+              of learning new things. My key ares of interest include
+              <Box component="span">
+                UX, UI design, devops and full-stack web development
+              </Box>
+            </Typography>
+            <Typography variant="body1">
+              If you have any questions about my work, or have ideas about what
+              we can do together, don't hesitate to get in touch via the form
+              below.
+              <ArrowDownwardIcon className="down-arrow" />
+            </Typography>
+          </Box>
         </Grid>
-        <Grid item xs={12} className="hello">
+        <Grid item xs={12} md={6} className="hello">
           <Box component="div" className="profile-image-container">
             <Box component="div" className="profile-image-wrapper">
               <img src={PersonalProfileImage}></img>
