@@ -48,7 +48,8 @@ theme = createTheme(theme, {
     },
     body1: {
       fontFamily: "Open sans",
-      fontWeight: 400,
+      fontWeight: 300,
+      fontSize: "20px",
       lineHeight: "1.75rem",
     },
   },
