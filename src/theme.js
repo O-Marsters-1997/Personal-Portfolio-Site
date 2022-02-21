@@ -14,6 +14,7 @@ let theme = createTheme({
     primary: {
       main: "rgba(28, 32, 45,1)",
       modifier: "rgba(95, 112, 139, 1)",
+      overlay: "rgba(80, 89, 121, .62)",
     },
     secondary: {
       main: "rgba(240, 167, 81, 1)",
@@ -44,6 +45,11 @@ theme = createTheme(theme, {
     },
     button: {
       fontFamily: "Raleway, Arial",
+    },
+    body1: {
+      fontFamily: "Open sans",
+      fontWeight: 400,
+      lineHeight: "1.75rem",
     },
   },
   breakpoints: {
