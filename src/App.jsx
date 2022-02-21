@@ -28,7 +28,7 @@ function App() {
   });
 
  window.addEventListener("resize", ()=> {
-   if (window.innerWidth <= 900) {
+   if (window.innerWidth >= 900) {
     setMobileMenu(false)
    }
  })

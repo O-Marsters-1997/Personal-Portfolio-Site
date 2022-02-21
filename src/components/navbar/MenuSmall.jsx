@@ -7,6 +7,9 @@ const MenuSmall = () => {
     backgroundColor: theme.palette.primary.modifier,
     height: "90vh",
     display: "flex",
+    position: "absolute",
+    width: "100%",
+ 
     flexDirection: "column",
     justifyContent: "space-evenly",
     alignItems: "center",
