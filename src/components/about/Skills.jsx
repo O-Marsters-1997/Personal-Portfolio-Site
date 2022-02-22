@@ -13,12 +13,13 @@ import SPR from "../../assets/images/spring-white.svg";
 import PSQL from "../../assets/images/postgresql-white.svg";
 import GIT from "../../assets/images/git-white.svg";
 import LIN from "../../assets/images/linux-white.svg";
+import FLASK from "../../assets/images/flask-white.svg";
 
 const Skills = () => {
   const MySkills = styled("div")(({ theme }) => ({
     backgroundColor: theme.palette.primary.main,
     color: theme.palette.text.primary,
-    paddingTop: "8.5rem",
+    padding: "8.5rem 0",
 
     ".skills-grid-container": {
       width: "clamp(250px, 75vw, 1250px)",

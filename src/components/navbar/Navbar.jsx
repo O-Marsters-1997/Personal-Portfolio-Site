@@ -13,7 +13,7 @@ import Hamburger from "./Hamburger";
 import Github from "../../assets/images/github-white.svg";
 import Linkedin from "../../assets/images/linkedin.svg";
 
-const Navbar = ({ theme, onMobileClick }) => {
+const Navbar = ({ mobileMenu, onMobileClick }) => {
   const MyToolbar = styled("div")(({ theme }) => ({
     width: "100vw",
     position: "relative",
@@ -81,7 +81,7 @@ const Navbar = ({ theme, onMobileClick }) => {
     const options = {};
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
-        if (!entry.isIntersecting) {
+        if (!entry.isIntersecting && !mobileMenu) {
           header.classList.add("nav-fixed");
         } else {
           header.classList.remove("nav-fixed");

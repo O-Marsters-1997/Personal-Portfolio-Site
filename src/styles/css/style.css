@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   box-sizing: border-box;
@@ -14,6 +15,23 @@ body {
 canvas {
   width: 100vw;
   height: 100vh;
+}
+
+.project-item-bullet::before {
+  content: "•";
+  font-size: 2em;
+  vertical-align: middle;
+}
+
+@media (max-width: 700px) {
+  .project-item-wrapper-left {
+    height: 40vh !important;
+  }
+}
+@media (max-width: 400px) {
+  .project-item-wrapper-left {
+    height: 45vh !important;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

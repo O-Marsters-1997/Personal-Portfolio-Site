@@ -4,3 +4,23 @@ canvas {
   width: 100vw;
   height: 100vh;
 }
+
+.project-item-bullet::before {
+  content: "\2022";
+  font-size: 2em;
+  vertical-align: middle;
+}
+
+// Meida queries
+
+@media (max-width: 700px) {
+  .project-item-wrapper-left {
+    height: 40vh !important;
+  }
+}
+
+@media (max-width: 400px) {
+  .project-item-wrapper-left {
+    height: 45vh !important;
+  }
+}

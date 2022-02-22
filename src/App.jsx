@@ -7,6 +7,7 @@ import Navbar from "./components/navbar/Navbar";
 import MenuSmall from "./components/navbar/MenuSmall";
 import CanvasContainer from "../src/containers/CanvasContainer";
 import AboutContainer from "./containers/AboutContainer";
+import Projects from "./components/projects/Projects";
 import { ThemeProvider, Grid, CssBaseline, Typography } from "@mui/material";
 import { ConstructionOutlined, CoPresentOutlined } from "@mui/icons-material";
 
@@ -39,12 +40,19 @@ function App() {
       <CssBaseline />
       <div className="App">
         <CanvasContainer theme={theme} />
-
-        <Navbar theme={theme} onMobileClick={onMobileClick}  sx={{bgcolor:"red"}}/>
-
+        <Navbar
+          mobileMenu={mobileMenu}
+          onMobileClick={onMobileClick}
+          sx={{ bgcolor: "red" }}
+        />
         {/* This is a toggle effect on displaying the mobile menu */}
         {mobileMenu ? <MenuSmall /> : null}
-        {!mobileMenu ? <AboutContainer /> : null}
+        {!mobileMenu ? (
+          <>
+            <AboutContainer />
+            <Projects />
+          </>
+        ) : null}
       </div>
     </ThemeProvider>
   );

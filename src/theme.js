@@ -16,6 +16,7 @@ let theme = createTheme({
       modifier: "rgba(60,68,92, 1)",
       overlay: "rgba(80, 89, 121, .62)",
       navAccent: "rgba(95, 112, 139, 1)",
+      project: "rgba(60, 68, 92, .92)",
     },
     secondary: {
       main: "rgba(240, 167, 81, 1)",
@@ -41,6 +42,11 @@ theme = createTheme(theme, {
     h3: {
       fontFamily: "Cabin, Arial",
     },
+    h4: {
+      fontFamily: "Raleway, Arial",
+      fontWeight: "600",
+      fontSize: "1.2em",
+    },
     h5: {
       fontFamily: "Raleway, Arial",
     },
@@ -48,15 +54,20 @@ theme = createTheme(theme, {
       fontFamily: "Raleway, Arial",
     },
     body1: {
-      fontFamily: "Open sans",
+      fontFamily: "roboto",
       fontWeight: 300,
       fontSize: "20px",
       lineHeight: "1.75rem",
+    },
+    subtitle: {
+      fontFamily: "Raleway, Arial",
+      fontSize: ".95rem",
     },
   },
   breakpoints: {
     values: {
       xs: 0,
+      vs: 300,
       sm: 500,
       md: 900,
       lg: 1200,
