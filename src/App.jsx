@@ -38,26 +38,13 @@ function App() {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <div className="App">
-        <Grid container spacing={0}>
-          <Grid item xs={12}>
-            <CanvasContainer theme={theme} />
-          </Grid>
-          <Grid item xs={12}>
-            <Navbar theme={theme} onMobileClick={onMobileClick} />
-          </Grid>
+        <CanvasContainer theme={theme} />
 
-          {/* This is a toggle effect on displaying the mobile menu */}
-          {mobileMenu ? (
-            <Grid item xs={12}>
-              <MenuSmall />
-            </Grid>
-          ) : null}
-          {!mobileMenu ? (
-            <Grid item xs={12}>
-              <AboutContainer />
-            </Grid>
-          ) : null}
-        </Grid>
+        <Navbar theme={theme} onMobileClick={onMobileClick}  sx={{bgcolor:"red"}}/>
+
+        {/* This is a toggle effect on displaying the mobile menu */}
+        {mobileMenu ? <MenuSmall /> : null}
+        {!mobileMenu ? <AboutContainer /> : null}
       </div>
     </ThemeProvider>
   );

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   AppBar,
   Toolbar,
@@ -17,10 +17,13 @@ const Navbar = ({ theme, onMobileClick }) => {
   const MyToolbar = styled("div")(({ theme }) => ({
     width: "100vw",
     position: "relative",
+    top: 0,
     display: "flex",
     backgroundColor: theme.palette.primary.modifier,
     justifyContent: "flex-start",
     boxShadow: "none",
+    borderBottom: `3.85px solid ${theme.palette.primary.navAccent}`,
+    zIndex: 200,
 
     ".icon-wrapper": {
       marginLeft: "5%",
@@ -68,10 +71,30 @@ const Navbar = ({ theme, onMobileClick }) => {
     },
   }));
 
+  useEffect(() => {
+    navChange();
+  });
+
+  const navChange = () => {
+    const header = document.getElementsByClassName("navbar")[0];
+    const welcomePage = document.getElementsByClassName("canvas-container")[0];
+    const options = {};
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) {
+          header.classList.add("nav-fixed");
+        } else {
+          header.classList.remove("nav-fixed");
+        }
+      });
+    }, options);
+    observer.observe(welcomePage);
+  };
+
   return (
-    <Box className="navbar">
-      <AppBar position="relative" sx={{ mt: "-30px", boxShadow: "none" }}>
-        <MyToolbar>
+    <Box onClick={navChange}>
+      <Box sx={{ mt: "-30px", boxShadow: "none" }}>
+        <MyToolbar className="navbar">
           <Box component="div" className="icon-wrapper">
             <img src={Github}></img>
             <img src={Linkedin}></img>
@@ -84,7 +107,7 @@ const Navbar = ({ theme, onMobileClick }) => {
           </Box>
           <Hamburger onMobileClick={onMobileClick} />
         </MyToolbar>
-      </AppBar>
+      </Box>
     </Box>
   );
 };

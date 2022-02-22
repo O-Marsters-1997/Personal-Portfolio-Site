@@ -45,6 +45,11 @@ const Skills = () => {
         img: {
           height: "3rem",
           marginTop: "1rem",
+
+          "&:hover": {
+            filter:
+              "brightness(0) saturate(100%) invert(85%) sepia(28%) saturate(2489%) hue-rotate(322deg) brightness(102%) contrast(88%)",
+          },
         },
 
         ".MuiTypography-subtitle": {

@@ -13,8 +13,9 @@ let theme = createTheme({
   palette: {
     primary: {
       main: "rgba(28, 32, 45,1)",
-      modifier: "rgba(95, 112, 139, 1)",
+      modifier: "rgba(60,68,92, 1)",
       overlay: "rgba(80, 89, 121, .62)",
+      navAccent: "rgba(95, 112, 139, 1)",
     },
     secondary: {
       main: "rgba(240, 167, 81, 1)",

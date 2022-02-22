@@ -4,7 +4,11 @@
 }
 
 body {
-  background-color: #1C202D;
+  background-color: #1C202D !important;
+}
+
+.nav-fixed {
+  position: fixed !important;
 }
 
 canvas {
