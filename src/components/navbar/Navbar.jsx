@@ -8,15 +8,7 @@ import {
   Box,
   Link,
 } from "@mui/material";
-import {
-  Link as ScrollLink,
-  DirectLink,
-  Element,
-  Events,
-  animateScroll as scroll,
-  scrollSpy,
-  scroller,
-} from "react-scroll";
+import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
 import { bgcolor, styled } from "@mui/system";
 import MenuIcon from "@mui/icons-material/Menu";
 import Hamburger from "./Hamburger";
@@ -73,6 +65,7 @@ const Navbar = ({ mobileMenu, onMobileClick }) => {
       "	.MuiTypography-root": {
         marginRight: ".8rem",
         fontSize: "1.5rem",
+        cursor: "pointer",
       },
       ".MuiButton-root": {
         fontSize: "1.5rem",
@@ -144,7 +137,13 @@ const Navbar = ({ mobileMenu, onMobileClick }) => {
                 contact
               </ScrollLink>
             </Typography>
-            <Button color="inherit">CV</Button>
+            <Link
+              href="https://o-marsters-1997.github.io/HTML-CV/"
+              target="_blank"
+              rel="noopener"
+            >
+              <Button color="inherit">CV</Button>
+            </Link>
           </Box>
           <Hamburger onMobileClick={onMobileClick} />
         </MyToolbar>

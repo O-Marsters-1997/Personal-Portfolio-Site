@@ -1,6 +1,7 @@
 import React from "react";
 import { Box, Typography, Grid } from "@mui/material";
 import { styled } from "@mui/system";
+import { Link } from "react-scroll";
 import PersonalProfileImage from "../../assets/images/PersonalProfileImage.jpg";
 import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
 
@@ -16,7 +17,8 @@ const AboutMe = () => {
     },
     ".MuiTypography-h3": {
       width: "fit-content",
-      margin: "0 auto",
+      fontSize: "3.8rem",
+      margin: "0 auto 7.5vh auto",
       textTransform: "uppercase",
 
       ".underline": {
@@ -29,24 +31,40 @@ const AboutMe = () => {
     },
     ".MuiTypography-body1": {
       marginBottom: "1.8rem",
+      fontSize: "1.6rem",
+      lineHeight: "2.15rem",
       span: {
         color: theme.palette.text.accent,
         fontWeight: 400,
         marginLeft: ".4rem",
       },
 
-      ".down-arrow": {
-        verticalAlign: "middle",
-        marginLeft: ".6rem",
+      ".down-arrow-wrapper": {
+        width: "fit-content",
+        height: "fit-content",
+        padding: ".65rem",
+        backgroundColor: theme.palette.primary.modifier,
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        alignItems: "center",
+        borderRadius: "50%",
+        border: `1px solid ${theme.palette.primary.navAccent}`,
+        marginTop: "1.2rem",
         cursor: "pointer",
-
         "&:hover": {
-          color: theme.palette.text.accent,
+          border: `1px solid ${theme.palette.text.accent}`,
+        },
+
+        ".down-arrow": {
+          verticalAlign: "middle",
+          fontSize: "2rem",
+          "&:hover": {
+            color: theme.palette.text.accent,
+          },
         },
       },
     },
-
-    ".hello": {},
 
     ".profile-image-wrapper": {
       width: "100%",
@@ -119,7 +137,11 @@ const AboutMe = () => {
               If you have any questions about my work, or have ideas about what
               we can do together, don't hesitate to get in touch via the form
               below.
-              <ArrowDownwardIcon className="down-arrow" />
+              <Box className="down-arrow-wrapper">
+                <Link to="contact" smooth={true} duration={1000}>
+                  <ArrowDownwardIcon className="down-arrow" />
+                </Link>
+              </Box>
             </Typography>
           </Box>
         </Grid>

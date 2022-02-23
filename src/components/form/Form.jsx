@@ -20,8 +20,9 @@ const Form = () => {
       margin: "0 auto",
 
       ".MuiTypography-h3": {
+        fontSize: "3.8rem",
         width: "fit-content",
-        margin: "0 auto",
+        margin: "0 auto 7.5vh auto",
         textTransform: "uppercase",
 
         ".underline": {
@@ -38,6 +39,8 @@ const Form = () => {
         },
       },
       ".MuiTypography-body1": {
+        fontSize: "1.6rem",
+        lineHeight: "2.15rem",
         marginBottom: "2rem",
         ".email-bold": {
           fontWeight: "bold",
@@ -57,7 +60,7 @@ const Form = () => {
         width: "100%",
         padding: "1rem",
         marginBottom: "2rem",
-        fontSize: "1.2rem",
+        fontSize: "1.6rem",
         color: theme.palette.text.secondary,
       },
     },
@@ -118,7 +121,11 @@ const Form = () => {
               ></input>
             </Box>
             <Box className="form-input-wrapper">
-              <textarea className="form-input-textarea" required rows="8"></textarea>
+              <textarea
+                className="form-input-textarea"
+                required
+                rows="8"
+              ></textarea>
             </Box>
             <Box className="form-input-wrapper button-wrapper">
               <Button variant="outlined">Get in touch</Button>

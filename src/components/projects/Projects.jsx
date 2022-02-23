@@ -35,7 +35,8 @@ const Projects = () => {
 
     ".MuiTypography-h3": {
       textTransform: "uppercase",
-      margin: "0 auto",
+      fontSize: "3.8rem",
+      margin: "0 auto 7.5vh auto",
       width: "fit-content",
 
       ".underline": {
