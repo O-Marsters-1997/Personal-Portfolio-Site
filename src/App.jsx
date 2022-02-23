@@ -8,6 +8,7 @@ import MenuSmall from "./components/navbar/MenuSmall";
 import CanvasContainer from "../src/containers/CanvasContainer";
 import AboutContainer from "./containers/AboutContainer";
 import Projects from "./components/projects/Projects";
+import Form from "./components/form/Form"
 import { ThemeProvider, Grid, CssBaseline, Typography } from "@mui/material";
 import { ConstructionOutlined, CoPresentOutlined } from "@mui/icons-material";
 
@@ -51,6 +52,7 @@ function App() {
           <>
             <AboutContainer />
             <Projects />
+            <Form></Form>
           </>
         ) : null}
       </div>
