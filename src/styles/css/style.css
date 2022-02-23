@@ -12,17 +12,6 @@ body {
   position: fixed !important;
 }
 
-canvas {
-  width: 100vw;
-  height: 100vh;
-}
-
-.project-item-bullet::before {
-  content: "•";
-  font-size: 2em;
-  vertical-align: middle;
-}
-
 @media (max-width: 700px) {
   .project-item-wrapper-left {
     height: 80vw !important;
@@ -38,9 +27,20 @@ canvas {
   }
 }
 @media (max-width: 400px) {
-  .project-item-wrapper-left {
-    height: 50vh !important;
+  .project-item-container,
+.project-item-wrapper-left {
+    height: 40vh !important;
   }
+}
+canvas {
+  width: 100vw;
+  height: 100vh;
+}
+
+.project-item-bullet::before {
+  content: "•";
+  font-size: 2em;
+  vertical-align: middle;
 }
 
 /*# sourceMappingURL=style.css.map */

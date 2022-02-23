@@ -24,6 +24,7 @@ const Projects = () => {
   const MyProjects = styled("div")(({ theme }) => ({
     width: "clamp(250px, 75vw, 1250px)",
     margin: "8.5rem auto 8.5rem auto",
+    position: "relative",
 
     ".MuiTypography-h3": {
       textTransform: "uppercase",
@@ -42,11 +43,15 @@ const Projects = () => {
     ".project-item-container": {
       position: "relative",
       width: "100%",
-      height: "25vw",
+
       borderRadius: "10px",
       marginBottom: "12.5rem",
+      [theme.breakpoints.down("lg")]: {
+        marginBottom: "15rem",
+      },
       [theme.breakpoints.down("md")]: {
         height: "65.5vw",
+        marginBottom: "12.5rem",
       },
       [theme.breakpoints.down("sm")]: {
         height: "65.5vw",

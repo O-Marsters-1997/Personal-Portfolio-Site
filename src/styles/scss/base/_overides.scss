@@ -1,0 +1,23 @@
+// Meida queries
+
+@media (max-width: 700px) {
+  .project-item-wrapper-left {
+    height: 80vw !important;
+  }
+}
+
+@media (max-width: 500px) {
+  .project-item-wrapper-left {
+    height: 90vw !important;
+  }
+  .project-item-icons-wrapper {
+    display: none !important;
+  }
+}
+
+@media (max-width: 400px) {
+  .project-item-container,
+  .project-item-wrapper-left {
+    height: 40vh !important;
+  }
+}
