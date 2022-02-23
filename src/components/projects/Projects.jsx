@@ -12,9 +12,16 @@ import {
 import Github from "../../assets/images/github-white.svg";
 import External from "../../assets/images/external-white.svg";
 import HTML from "../../assets/images/html-white.svg";
+import CSS from "../../assets/images/css-white.svg";
+import JS from "../../assets/images/javascript-white.svg";
 import SASS from "../../assets/images/sass-white.svg";
+import RE from "../../assets/images/react-white.svg";
+import MON from "../../assets/images/mongo-white.svg";
 import PY from "../../assets/images/python-white .svg";
 import PSQL from "../../assets/images/postgresql-white.svg";
+import JAV from "../../assets/images/java-white.svg";
+import SPR from "../../assets/images/spring-white.svg";
+import FIRE from "../../assets/images/firebase-white.svg";
 import FLASK from "../../assets/images/flask-white.svg";
 import Flask from "../../assets/images/flask.png";
 import Sleigh from "../../assets/images/react.png";
@@ -100,6 +107,7 @@ const Projects = () => {
           marginRight: ".8rem",
           height: "1.75rem",
           width: "1.75rem",
+          cursor: "pointer",
         },
       },
 
@@ -176,9 +184,14 @@ const Projects = () => {
       },
 
       // Exclusion rules for the second item to switch everything around
-      ".project-item-container:nth-child(3n)": {
+      ".project-item-container:nth-of-type(3n)": {
         ".project-item-wrapper-left": {
           marginLeft: "50%",
+          ".project-item-external-icons": {
+            img: {
+              cursor: "pointer",
+            },
+          },
         },
         ".project-item-wrapper-right": {
           left: "10%",
@@ -313,14 +326,16 @@ const Projects = () => {
             </Box>
           </Grid>
         </Grid>
+
+        {/* BBC Sleigh Ride starts here */}
         <Grid container className="project-item-container">
           <Grid item xs={12} md={6} className="project-item-wrapper-left">
-            <img src={Flask} className="project-item-image" />
+            <img src={Sleigh} className="project-item-image" />
             <Box className="project-item-image-overlay">
               <Box className="project-item-overlay-text">
                 <Box className="project-item-heading-small">
                   <Typography variant="subtitle">Featured work</Typography>
-                  <Typography variant="h4">Flask Cricket App</Typography>
+                  <Typography variant="h4">BBC Sleigh Ride</Typography>
                 </Box>
                 <Paper elevation={12} className="project-item-paper-small">
                   <List dense={true}>
@@ -333,8 +348,8 @@ const Projects = () => {
                         className="project-item-bullet"
                       ></Box>
                       <Typography variant="body1" className="project-text">
-                        Created an application for keeping track of the 2021
-                        Cricket World Cup.
+                        Developed an educational application about how Christmas
+                        is celebrated around the world.
                       </Typography>
                     </Box>
                     <Box
@@ -346,20 +361,8 @@ const Projects = () => {
                         className="project-item-bullet"
                       ></Box>
                       <Typography variant="body1" className="project-text">
-                        Manipulated relavant data using Python, connecting it to
-                        the front-end using Flask and Jinja.
-                      </Typography>
-                    </Box>
-                    <Box
-                      component="div"
-                      className="project-item-bullet-wrapper"
-                    >
-                      <Box
-                        component="span"
-                        className="project-item-bullet"
-                      ></Box>
-                      <Typography variant="body1" className="project-text">
-                        Managed relational databases using PostgreSQL.
+                        API calls using non-relational databases and express
+                        server configuration.
                       </Typography>
                     </Box>
                   </List>
@@ -369,9 +372,9 @@ const Projects = () => {
                   className="project-item-icons-wrapper-small"
                 >
                   <img src={HTML} alt="" />
-                  <img src={SASS} alt="" />
-                  <img src={PY} alt="" />
-                  <img src={FLASK} alt="" />
+                  <img src={CSS} alt="" />
+                  <img src={JS} alt="" />
+                  <img src={RE} alt="" />
                   <img src={PSQL} alt="" />
                 </Box>
               </Box>
@@ -385,49 +388,45 @@ const Projects = () => {
           <Grid item xs={12} md={6} className="project-item-wrapper-right">
             <Box className="project-item-heading">
               <Typography variant="subtitle">Featured work</Typography>
-              <Typography variant="h4">Flask Cricket App</Typography>
+              <Typography variant="h4">BBC Sleigh Ride</Typography>
             </Box>
             <Paper elevation={12}>
               <List dense={true}>
                 <Box component="div" className="project-item-bullet-wrapper">
                   <Box component="span" className="project-item-bullet"></Box>
                   <Typography variant="body1" className="project-text">
-                    Created an application for keeping track of the 2021 Cricket
-                    World Cup.
+                    Developed an educational application about how Christmas is
+                    celebrated around the world.
                   </Typography>
                 </Box>
                 <Box component="div" className="project-item-bullet-wrapper">
                   <Box component="span" className="project-item-bullet"></Box>
                   <Typography variant="body1" className="project-text">
-                    Manipulated relavant data using Python, connecting it to the
-                    front-end using Flask and Jinja.
-                  </Typography>
-                </Box>
-                <Box component="div" className="project-item-bullet-wrapper">
-                  <Box component="span" className="project-item-bullet"></Box>
-                  <Typography variant="body1" className="project-text">
-                    Managed relational databases using PostgreSQL.
+                    API calls using non-relational databases and express server
+                    configuration.
                   </Typography>
                 </Box>
               </List>
             </Paper>
             <Box component="div" className="project-item-icons-wrapper">
-              <img src={HTML} alt="" />
               <img src={SASS} alt="" />
-              <img src={PY} alt="" />
-              <img src={FLASK} alt="" />
-              <img src={PSQL} alt="" />
+              <img src={JAV} alt="" />
+              <img src={SPR} alt="" />
+              <img src={RE} alt="" />
+              <img src={FIRE} alt="" />
             </Box>
           </Grid>
         </Grid>
+
+        {/* Clanhub Starts here */}
         <Grid container className="project-item-container">
           <Grid item xs={12} md={6} className="project-item-wrapper-left">
-            <img src={Flask} className="project-item-image" />
+            <img src={Clanhub} className="project-item-image" />
             <Box className="project-item-image-overlay">
               <Box className="project-item-overlay-text">
                 <Box className="project-item-heading-small">
                   <Typography variant="subtitle">Featured work</Typography>
-                  <Typography variant="h4">Flask Cricket App</Typography>
+                  <Typography variant="h4">Clanhub</Typography>
                 </Box>
                 <Paper elevation={12} className="project-item-paper-small">
                   <List dense={true}>
@@ -440,8 +439,8 @@ const Projects = () => {
                         className="project-item-bullet"
                       ></Box>
                       <Typography variant="body1" className="project-text">
-                        Created an application for keeping track of the 2021
-                        Cricket World Cup.
+                        An open source project for Code Clan alumni to maintain
+                        and strengthen their community.
                       </Typography>
                     </Box>
                     <Box
@@ -453,20 +452,8 @@ const Projects = () => {
                         className="project-item-bullet"
                       ></Box>
                       <Typography variant="body1" className="project-text">
-                        Manipulated relavant data using Python, connecting it to
-                        the front-end using Flask and Jinja.
-                      </Typography>
-                    </Box>
-                    <Box
-                      component="div"
-                      className="project-item-bullet-wrapper"
-                    >
-                      <Box
-                        component="span"
-                        className="project-item-bullet"
-                      ></Box>
-                      <Typography variant="body1" className="project-text">
-                        Managed relational databases using PostgreSQL.
+                        Authentication using firebase, allowing users to signup,
+                        login and contribute to posts on a filterable forum.
                       </Typography>
                     </Box>
                   </List>
@@ -475,11 +462,11 @@ const Projects = () => {
                   component="div"
                   className="project-item-icons-wrapper-small"
                 >
-                  <img src={HTML} alt="" />
                   <img src={SASS} alt="" />
-                  <img src={PY} alt="" />
-                  <img src={FLASK} alt="" />
-                  <img src={PSQL} alt="" />
+                  <img src={JAV} alt="" />
+                  <img src={SPR} alt="" />
+                  <img src={RE} alt="" />
+                  <img src={FIRE} alt="" />
                 </Box>
               </Box>
             </Box>
@@ -492,28 +479,22 @@ const Projects = () => {
           <Grid item xs={12} md={6} className="project-item-wrapper-right">
             <Box className="project-item-heading">
               <Typography variant="subtitle">Featured work</Typography>
-              <Typography variant="h4">Flask Cricket App</Typography>
+              <Typography variant="h4">Clanhub</Typography>
             </Box>
             <Paper elevation={12}>
               <List dense={true}>
                 <Box component="div" className="project-item-bullet-wrapper">
                   <Box component="span" className="project-item-bullet"></Box>
                   <Typography variant="body1" className="project-text">
-                    Created an application for keeping track of the 2021 Cricket
-                    World Cup.
+                    An open source project for Code Clan alumni to maintain and
+                    strengthen their community.
                   </Typography>
                 </Box>
                 <Box component="div" className="project-item-bullet-wrapper">
                   <Box component="span" className="project-item-bullet"></Box>
                   <Typography variant="body1" className="project-text">
-                    Manipulated relavant data using Python, connecting it to the
-                    front-end using Flask and Jinja.
-                  </Typography>
-                </Box>
-                <Box component="div" className="project-item-bullet-wrapper">
-                  <Box component="span" className="project-item-bullet"></Box>
-                  <Typography variant="body1" className="project-text">
-                    Managed relational databases using PostgreSQL.
+                    Authentication using firebase, allowing users to signup,
+                    login and contribute to posts on a filterable forum.
                   </Typography>
                 </Box>
               </List>
