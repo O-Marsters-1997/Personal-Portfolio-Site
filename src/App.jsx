@@ -9,6 +9,7 @@ import CanvasContainer from "../src/containers/CanvasContainer";
 import AboutContainer from "./containers/AboutContainer";
 import Projects from "./components/projects/Projects";
 import Form from "./components/form/Form"
+import Footer from "./components/footer/Footer"
 import { ThemeProvider, Grid, CssBaseline, Typography } from "@mui/material";
 import { ConstructionOutlined, CoPresentOutlined } from "@mui/icons-material";
 
@@ -47,12 +48,13 @@ function App() {
           sx={{ bgcolor: "red" }}
         />
         {/* This is a toggle effect on displaying the mobile menu */}
-        {mobileMenu ? <MenuSmall /> : null}
+        {mobileMenu ? <MenuSmall onMobileClick={onMobileClick} /> : null}
         {!mobileMenu ? (
           <>
             <AboutContainer />
-            <Projects  />
-            <Form></Form>
+            <Projects />
+            <Form />
+            <Footer />
           </>
         ) : null}
       </div>

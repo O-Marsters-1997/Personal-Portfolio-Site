@@ -18,6 +18,8 @@ let theme = createTheme({
       overlay: "rgba(80, 89, 121, .62)",
       navAccent: "rgba(95, 112, 139, 1)",
       project: "rgba(60, 68, 92, .92)",
+      footer: "#21273bff",
+      footerShadow: "#21283dff",
     },
     secondary: {
       main: "rgba(240, 167, 81, 1)",
@@ -64,6 +66,9 @@ theme = createTheme(theme, {
     subtitle: {
       fontFamily: "Raleway, Arial",
       fontSize: ".95rem",
+    },
+    subtitle2: {
+      fontFamily: "Raleway, Arial",
     },
   },
   breakpoints: {
