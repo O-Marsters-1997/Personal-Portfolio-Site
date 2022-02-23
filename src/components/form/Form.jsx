@@ -74,7 +74,7 @@ const Form = () => {
   }));
 
   return (
-    <MyWrapper>
+    <MyWrapper id="contact">
       <Grid container spacing={2}>
         <Grid item xs={12}>
           <Typography variant="h3">

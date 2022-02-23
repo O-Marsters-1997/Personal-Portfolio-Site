@@ -211,7 +211,7 @@ const Projects = () => {
     // Media query for when the page is medium so split view
   }));
   return (
-    <MyProjects>
+    <MyProjects id="projects">
       <Grid container spacing={2}>
         <Grid item xs={12}>
           <Typography variant="h3">

@@ -6,7 +6,17 @@ import {
   Typography,
   Button,
   Box,
+  Link,
 } from "@mui/material";
+import {
+  Link as ScrollLink,
+  DirectLink,
+  Element,
+  Events,
+  animateScroll as scroll,
+  scrollSpy,
+  scroller,
+} from "react-scroll";
 import { bgcolor, styled } from "@mui/system";
 import MenuIcon from "@mui/icons-material/Menu";
 import Hamburger from "./Hamburger";
@@ -91,18 +101,49 @@ const Navbar = ({ mobileMenu, onMobileClick }) => {
     observer.observe(welcomePage);
   };
 
+  const scrollIntoView = () => {};
+
   return (
     <Box onClick={navChange}>
       <Box sx={{ mt: "-30px", boxShadow: "none" }}>
         <MyToolbar className="navbar">
           <Box component="div" className="icon-wrapper">
-            <img src={Github}></img>
-            <img src={Linkedin}></img>
+            <Link
+              href="https://github.com/O-Marsters-1997"
+              target="_blank"
+              rel="noopener"
+            >
+              <img src={Github}></img>
+            </Link>
+            <Link
+              href="https://www.linkedin.com/in/olly-marsters/"
+              target="_blank"
+              rel="noopener"
+            >
+              <img src={Linkedin}></img>
+            </Link>
           </Box>
           <Box component="div" className="nav-wrapper">
-            <Typography variant="h5">about</Typography>
-            <Typography variant="h5">projects</Typography>
-            <Typography variant="h5">contact</Typography>
+            <Typography variant="h5">
+              <ScrollLink to="about" smooth={true} duration={1000}>
+                about
+              </ScrollLink>
+            </Typography>
+            <Typography variant="h5">
+              <ScrollLink
+                to="projects"
+                smooth={true}
+                duration={1000}
+                offset={-150}
+              >
+                projects
+              </ScrollLink>
+            </Typography>
+            <Typography variant="h5">
+              <ScrollLink to="contact" smooth={true} duration={1000}>
+                contact
+              </ScrollLink>
+            </Typography>
             <Button color="inherit">CV</Button>
           </Box>
           <Hamburger onMobileClick={onMobileClick} />

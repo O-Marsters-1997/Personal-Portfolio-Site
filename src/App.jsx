@@ -51,7 +51,7 @@ function App() {
         {!mobileMenu ? (
           <>
             <AboutContainer />
-            <Projects />
+            <Projects  />
             <Form></Form>
           </>
         ) : null}

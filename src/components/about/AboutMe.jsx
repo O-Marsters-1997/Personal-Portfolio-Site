@@ -92,7 +92,7 @@ const AboutMe = () => {
     },
   }));
   return (
-    <MyWrapper>
+    <MyWrapper id="about">
       <Grid container spacing={2}>
         <Grid item xs={12}>
           <Typography variant="h3">

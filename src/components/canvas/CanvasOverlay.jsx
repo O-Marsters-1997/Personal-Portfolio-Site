@@ -14,6 +14,10 @@ const CanvasOverlay = ({}) => {
     setArrowToggle(!arrowToggle);
   }
 
+  const goToLink = ()=> {
+    
+  }
+
   const TitleWrapper = styled("div")(({ theme }) => ({
     position: "absolute",
     display: "flex",
