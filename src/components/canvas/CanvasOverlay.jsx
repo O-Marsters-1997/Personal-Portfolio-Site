@@ -1,22 +1,19 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import useMediaQuery from "@mui/material/useMediaQuery";
+import { Link } from "react-scroll";
 import { Box, Typography, Button } from "@mui/material";
 import { bgcolor, styled } from "@mui/system";
 import { AbcRounded } from "@mui/icons-material";
 import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
 
 const CanvasOverlay = ({}) => {
-
   const [arrowToggle, setArrowToggle] = useState(false);
 
-
-  const handleToggle = ()=> {
+  const handleToggle = () => {
     setArrowToggle(!arrowToggle);
-  }
+  };
 
-  const goToLink = ()=> {
-    
-  }
+  const goToLink = () => {};
 
   const TitleWrapper = styled("div")(({ theme }) => ({
     position: "absolute",
@@ -48,7 +45,7 @@ const CanvasOverlay = ({}) => {
       flexDirection: "row",
       [theme.breakpoints.down("md")]: {
         flexDirection: "column",
-        "span": {
+        span: {
           padding: 0,
         },
       },
@@ -78,16 +75,17 @@ const CanvasOverlay = ({}) => {
         <Typography variant="h3" className="overlay-text-title">
           <Box component="span">I'm a software </Box>
           <Box component="span" sx={{ pl: ".32em" }}>
-            {" "}
-            engineer{" "}
+            engineer
           </Box>
         </Typography>
-        <Button variant="outlined" className="overlay-button">
-          <Box className="overlay-button-wrapper">
-            <Typography>See more</Typography>
-            <ArrowDownwardIcon/>
-          </Box>
-        </Button>
+        <Link to="contact" smooth={true} duration={1000}>
+          <Button variant="outlined" className="overlay-button">
+            <Box className="overlay-button-wrapper">
+              <Typography>See more</Typography>
+              <ArrowDownwardIcon />
+            </Box>
+          </Button>
+        </Link>
       </Box>
     </TitleWrapper>
   );

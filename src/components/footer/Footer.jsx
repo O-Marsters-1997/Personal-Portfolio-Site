@@ -24,6 +24,16 @@ const Footer = () => {
         letterSpacing: ".1em",
         marginRight: ".6rem",
       },
+      "&:first-child::before": {
+        content: "'\\00A9'",
+        verticalAlign: "center",
+        justifySelf: "center",
+        marginRight: ".35rem",
+        fontSize: "1.2em",
+        transform: "translateY(-2.5px)",
+        fontStyle: "normal",
+      },
+
       "	.github-icon": {
         cursor: "pointer",
         color: theme.palette.text.primary,
@@ -38,7 +48,7 @@ const Footer = () => {
     <MyWrapper>
       <Box component="div" className="footer-line-wrapper">
         <Typography variant="subtitle2">
-          Developed by Olly Marsters, 2021{" "}
+          Developed by Olly Marsters, 2022
         </Typography>
       </Box>
       <Box component="div" className="footer-line-wrapper">
