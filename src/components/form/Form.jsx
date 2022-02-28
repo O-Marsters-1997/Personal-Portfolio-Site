@@ -72,9 +72,34 @@ const Form = () => {
       justifyContent: "center",
       position: "relative",
       ".MuiButton-outlined": {
-        width: "fit-content",
+        width: "100vw",
         textAlign: "center",
         fontSize: "1.3rem",
+      },
+    },
+
+    // Swperate rule for button style
+
+    ".submit-wrapper": {
+      display: "flex",
+      justifyContent: "center",
+
+      ".button-submit": {
+        cursor: "pointer",
+        position: "relative",
+
+        input: {
+          fontFamily: "roboto",
+          backgroundColor: "transparent",
+          fontSize: "1.35rem",
+          fontWeight: "300",
+          color: theme.palette.text.primary,
+          border: "none",
+          boxShadow: "none",
+          cursor: "pointer",
+          padding: "0.5rem",
+          textTransform: "uppercase",
+        },
       },
     },
   }));
@@ -124,7 +149,7 @@ const Form = () => {
   });
 
   const sendEmail = (e) => {
-    console.log("hello")
+    console.log("hello");
     e.preventDefault();
 
     emailjs
@@ -215,15 +240,14 @@ const Form = () => {
                 rows="8"
               ></textarea>
             </Box>
-            <Box >
-              <input
-                type="submit"
-                value="Get in touch"
-                className="form-input-wrapper button-wrapper"
-              ></input>
-            </Box>
-            <Box className="form-input-wrapper button-wrapper">
-              <Button variant="outlined">Get in touch</Button>
+            <Box className="submit-wrapper">
+              <Button className="button-submit">
+                <input
+                  type="submit"
+                  value="Get in touch"
+                  className="form-input-submit"
+                ></input>
+              </Button>
             </Box>
           </form>
         </Grid>
