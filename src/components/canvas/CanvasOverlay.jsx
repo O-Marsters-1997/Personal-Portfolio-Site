@@ -15,7 +15,6 @@ const CanvasOverlay = ({}) => {
 
   const goToLink = () => {};
 
-
   const TitleWrapper = styled("div")(({ theme }) => ({
     position: "absolute",
     display: "flex",
@@ -64,6 +63,10 @@ const CanvasOverlay = ({}) => {
     ".MuiButton-root": {
       marginTop: "1.4rem",
     },
+
+    ".span-separation": {
+      marginRight: "1.2rem",
+    },
   }));
 
   return (
@@ -74,7 +77,7 @@ const CanvasOverlay = ({}) => {
           Olly Marsters
         </Typography>
         <Typography variant="h3" className="overlay-text-title">
-          <span>I'm a software </span>
+          <span className="span-separation">I'm a software </span>
           <span>engineer</span>
         </Typography>
         <Link to="contact" smooth={true} duration={1000}>
