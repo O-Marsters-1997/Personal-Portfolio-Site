@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useInView } from "react-intersection-observer";
+import { useAnimation } from "framer-motion";
 import { styled } from "@mui/system";
 import {
   Grid,
@@ -211,6 +213,15 @@ const Projects = () => {
 
     // Media query for when the page is medium so split view
   }));
+
+  const { ref, inView } = useInView();
+  const animation = useAnimation();
+
+  useEffect(() => {
+    if (inView) {
+      console.log("yes");
+    }
+  }, [inView]);
   return (
     <MyProjects id="projects">
       <Grid container spacing={2}>
@@ -297,7 +308,7 @@ const Projects = () => {
             <Paper elevation={12}>
               <List dense={true}>
                 <Box component="div" className="project-item-bullet-wrapper">
-                  <Box component="span" className="project-item-bullet"></Box>
+                  <span className="project-item-bullet"></span>
                   <Typography variant="body1" className="project-text">
                     Created an application for keeping track of the 2021 Cricket
                     World Cup.
@@ -311,7 +322,7 @@ const Projects = () => {
                   </Typography>
                 </Box>
                 <Box component="div" className="project-item-bullet-wrapper">
-                  <Box component="span" className="project-item-bullet"></Box>
+                  <span className="project-item-bullet"></span>
                   <Typography variant="body1" className="project-text">
                     Managed relational databases using PostgreSQL.
                   </Typography>
@@ -344,10 +355,7 @@ const Projects = () => {
                       component="div"
                       className="project-item-bullet-wrapper"
                     >
-                      <Box
-                        component="span"
-                        className="project-item-bullet"
-                      ></Box>
+                      <span className="project-item-bullet"></span>
                       <Typography variant="body1" className="project-text">
                         Developed an educational application about how Christmas
                         is celebrated around the world.
@@ -357,10 +365,7 @@ const Projects = () => {
                       component="div"
                       className="project-item-bullet-wrapper"
                     >
-                      <Box
-                        component="span"
-                        className="project-item-bullet"
-                      ></Box>
+                      <span className="project-item-bullet"></span>
                       <Typography variant="body1" className="project-text">
                         API calls using non-relational databases and express
                         server configuration.
@@ -394,14 +399,14 @@ const Projects = () => {
             <Paper elevation={12}>
               <List dense={true}>
                 <Box component="div" className="project-item-bullet-wrapper">
-                  <Box component="span" className="project-item-bullet"></Box>
+                  <span className="project-item-bullet"></span>
                   <Typography variant="body1" className="project-text">
                     Developed an educational application about how Christmas is
                     celebrated around the world.
                   </Typography>
                 </Box>
                 <Box component="div" className="project-item-bullet-wrapper">
-                  <Box component="span" className="project-item-bullet"></Box>
+                  <span className="project-item-bullet"></span>
                   <Typography variant="body1" className="project-text">
                     API calls using non-relational databases and express server
                     configuration.

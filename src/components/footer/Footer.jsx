@@ -24,7 +24,7 @@ const Footer = () => {
         letterSpacing: ".1em",
         marginRight: ".6rem",
       },
-      "&:first-child::before": {
+      "&:first-of-type::before": {
         content: "'\\00A9'",
         verticalAlign: "center",
         justifySelf: "center",

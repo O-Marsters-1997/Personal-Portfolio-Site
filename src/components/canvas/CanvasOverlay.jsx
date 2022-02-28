@@ -15,6 +15,7 @@ const CanvasOverlay = ({}) => {
 
   const goToLink = () => {};
 
+
   const TitleWrapper = styled("div")(({ theme }) => ({
     position: "absolute",
     display: "flex",
@@ -73,10 +74,8 @@ const CanvasOverlay = ({}) => {
           Olly Marsters
         </Typography>
         <Typography variant="h3" className="overlay-text-title">
-          <Box component="span">I'm a software </Box>
-          <Box component="span" sx={{ pl: ".32em" }}>
-            engineer
-          </Box>
+          <span>I'm a software </span>
+          <span>engineer</span>
         </Typography>
         <Link to="contact" smooth={true} duration={1000}>
           <Button variant="outlined" className="overlay-button">

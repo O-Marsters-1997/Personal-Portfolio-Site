@@ -31,7 +31,7 @@ const Navbar = ({ mobileMenu, onMobileClick }) => {
       marginLeft: "5%",
       display: "flex",
       width: "30%",
-      padding: "2em 0",
+      padding: "1.5em 0",
       justifyContnet: "space-evenly",
       alignItems: "center",
 

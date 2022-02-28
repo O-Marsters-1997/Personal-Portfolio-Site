@@ -1,13 +1,90 @@
-import React from "react";
+import React, { useState, useRef, useEffect } from "react";
+import { animate, useAnimation } from "framer-motion";
 import { Box, Typography, Grid } from "@mui/material";
 import { styled } from "@mui/system";
 import { Link } from "react-scroll";
+import { motion } from "framer-motion";
 import PersonalProfileImage from "../../assets/images/PersonalProfileImage.jpg";
 import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
 
 const AboutMe = () => {
+  const myRef = useRef();
+
+  const options = {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.3,
+  };
+
+  const variants = {
+    leftStart: {
+      x: -200,
+      y: 100,
+      opacity: 0.2,
+    },
+    leftEnd: {
+      x: 0,
+      y: 0,
+      opacity: 1,
+      transition: {
+        type: "spring",
+        stiffness: 40,
+        damping: 12,
+      },
+    },
+    rightStart: {
+      x: 200,
+      y: 100,
+      opacity: 0,
+    },
+    rightEnd: {
+      x: 0,
+      y: 0,
+      opacity: 1,
+      transition: {
+        type: "spring",
+        stiffness: 40,
+        damping: 12,
+      },
+    },
+    titleStart: {
+      opacity: 0,
+      x: 0,
+    },
+    titleEnd: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        type: "spring",
+        stiffness: 30,
+        damping: 18,
+        delay: 0.6,
+      },
+    },
+  };
+
+  const leftAnimation = useAnimation();
+  const rightAnimation = useAnimation();
+  const titleAnimation = useAnimation();
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      const entry = entries[0];
+      if (entry.isIntersecting) {
+        leftAnimation.start("leftEnd");
+        rightAnimation.start("rightEnd");
+        titleAnimation.start("titleEnd");
+      }
+      if (!entry.isIntersecting) {
+        leftAnimation.start("leftStart");
+        rightAnimation.start("rightStart");
+        titleAnimation.start("titleStart");
+      }
+    }, options);
+    observer.observe(myRef.current);
+  });
+
   const MyWrapper = styled("div")(({ theme }) => ({
-    backgroundColor: theme.palette.primary.main,
     color: theme.palette.text.primary,
     padding: "5rem 0",
 
@@ -109,16 +186,30 @@ const AboutMe = () => {
       },
     },
   }));
+
   return (
     <MyWrapper id="about">
-      <Grid container spacing={2}>
-        <Grid item xs={12}>
+      <Grid ref={myRef} container spacing={2}>
+        <Grid
+          item
+          xs={12}
+          component={motion.div}
+          variants={variants}
+          animate={titleAnimation}
+        >
           <Typography variant="h3">
             About
             <Box component="div" className="underline"></Box>
           </Typography>
         </Grid>
-        <Grid item xs={12} md={6}>
+        <Grid
+          item
+          xs={12}
+          md={6}
+          component={motion.div}
+          variants={variants}
+          animate={leftAnimation}
+        >
           <Box component="div">
             <Typography variant="body1">
               Hi, my name is Olly. Having graduated with a degree in
@@ -133,19 +224,28 @@ const AboutMe = () => {
                 UX, UI design, devops and full-stack web development
               </Box>
             </Typography>
-            <Typography variant="body1">
-              If you have any questions about my work, or have ideas about what
-              we can do together, don't hesitate to get in touch via the form
-              below.
+            <Box className="about-jumbotron-end-wrapper">
+              <Typography variant="body1">
+                If you have any questions about my work, or have ideas about
+                what we can do together, don't hesitate to get in touch via the
+                form below.
+              </Typography>
               <Box className="down-arrow-wrapper">
                 <Link to="contact" smooth={true} duration={1000}>
                   <ArrowDownwardIcon className="down-arrow" />
                 </Link>
               </Box>
-            </Typography>
+            </Box>
           </Box>
         </Grid>
-        <Grid item xs={12} md={6} className="hello">
+        <Grid
+          item
+          xs={12}
+          md={6}
+          component={motion.div}
+          variants={variants}
+          animate={rightAnimation}
+        >
           <Box component="div" className="profile-image-container">
             <Box component="div" className="profile-image-wrapper">
               <img src={PersonalProfileImage}></img>

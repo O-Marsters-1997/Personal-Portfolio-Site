@@ -1,4 +1,6 @@
-import React from "react";
+import React, {useEffect} from "react";
+import { useInView } from "react-intersection-observer";
+import { useAnimation } from "framer-motion";
 import { styled } from "@mui/system";
 import {
   Grid,
@@ -75,6 +77,7 @@ const Form = () => {
       },
     },
   }));
+
 
   return (
     <MyWrapper id="contact">
