@@ -221,11 +221,11 @@ const Projects = () => {
   const options = {
     root: null,
     rootMargin: "0px",
-    threshold: 0.3,
+    threshold: 0.2,
   };
 
   const variants = {
-    projectLeftStart: { scale: 0.8, opacity: 0, x: -300, y: 100 },
+    projectLeftStart: { scale: 0.8, opacity: 0, x: "-10vw", y: 100 },
     projectLeftEnd: {
       opacity: 1,
       x: 0,
@@ -233,7 +233,7 @@ const Projects = () => {
       scale: 1,
       transition: { type: "spring", stiffness: 40, damping: 12 },
     },
-    projectRightStart: { scale: 0.8, opacity: 0, x: 300, y: 100 },
+    projectRightStart: { scale: 0.8, opacity: 0, x: "10vw", y: 100 },
     projectRightEnd: {
       opacity: 1,
       x: 0,

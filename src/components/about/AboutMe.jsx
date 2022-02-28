@@ -18,7 +18,7 @@ const AboutMe = () => {
 
   const variants = {
     leftStart: {
-      x: -200,
+      x: "-10vw",
       y: 100,
       opacity: 0,
       transition: {
@@ -36,7 +36,7 @@ const AboutMe = () => {
       },
     },
     rightStart: {
-      x: 200,
+      x: "10vw",
       y: 100,
       opacity: 0,
     },

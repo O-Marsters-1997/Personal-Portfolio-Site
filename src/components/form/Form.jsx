@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from "react";
+import emailjs from "emailjs-com";
 import { useInView } from "react-intersection-observer";
 import { useAnimation, motion } from "framer-motion";
 import { styled } from "@mui/system";
@@ -122,6 +123,27 @@ const Form = () => {
     observer.observe(myRef.current);
   });
 
+  const sendEmail = (e) => {
+    console.log("hello")
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_p8sj2pk",
+        "template_r0qo8k5",
+        e.target,
+        "jnIXWbyOF99b0LXom"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
+
   return (
     <MyWrapper id="contact">
       <Grid container spacing={2} ref={myRef}>
@@ -166,10 +188,11 @@ const Form = () => {
           variants={variants}
           animate={animation}
         >
-          <form action="POST">
+          <form onSubmit={sendEmail}>
             <Box className="form-input-wrapper">
               <input
                 type="text"
+                name="name"
                 required
                 placeholder="your name"
                 className="form-input-text"
@@ -178,6 +201,7 @@ const Form = () => {
             <Box className="form-input-wrapper">
               <input
                 type="text"
+                name="email"
                 required
                 placeholder="your email"
                 className="form-input-text"
@@ -185,10 +209,18 @@ const Form = () => {
             </Box>
             <Box className="form-input-wrapper">
               <textarea
+                name="message"
                 className="form-input-textarea"
                 required
                 rows="8"
               ></textarea>
+            </Box>
+            <Box >
+              <input
+                type="submit"
+                value="Get in touch"
+                className="form-input-wrapper button-wrapper"
+              ></input>
             </Box>
             <Box className="form-input-wrapper button-wrapper">
               <Button variant="outlined">Get in touch</Button>
