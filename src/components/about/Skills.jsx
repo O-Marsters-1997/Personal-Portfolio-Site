@@ -88,6 +88,7 @@ const Skills = () => {
       transition: { type: "spring", stiffness: 30, damping: 18, delay: 0.6 },
     },
   };
+ 
 
   const animation = useAnimation();
   const titleAnimation = useAnimation();

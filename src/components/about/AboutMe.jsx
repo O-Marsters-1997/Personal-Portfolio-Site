@@ -20,7 +20,7 @@ const AboutMe = () => {
     leftStart: {
       x: -200,
       y: 100,
-      opacity: 0.2,
+      opacity: 0,
     },
     leftEnd: {
       x: 0,

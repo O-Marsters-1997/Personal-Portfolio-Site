@@ -1,6 +1,6 @@
-import React, {useEffect} from "react";
+import React, { useEffect, useRef } from "react";
 import { useInView } from "react-intersection-observer";
-import { useAnimation } from "framer-motion";
+import { useAnimation, motion } from "framer-motion";
 import { styled } from "@mui/system";
 import {
   Grid,
@@ -78,16 +78,70 @@ const Form = () => {
     },
   }));
 
+  const myRef = useRef();
+
+  const options = {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.3,
+  };
+
+  const variants = {
+    formStart: { scale: 0.4, opacity: 0, y: 100 },
+    formEnd: {
+      opacity: 1,
+      x: 0,
+      y: 0,
+      scale: 1,
+      transition: { type: "spring", stiffness: 40, damping: 12 },
+    },
+    titleStart: {
+      opacity: 0,
+    },
+    titleEnd: {
+      opacity: 1,
+      transition: { type: "spring", stiffness: 30, damping: 18, delay: 0.6 },
+    },
+  };
+
+  const animation = useAnimation();
+  const titleAnimation = useAnimation();
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      const entry = entries[0];
+      if (!entry.isIntersecting) {
+        animation.start("formStart");
+        titleAnimation.start("titleStart");
+      }
+      if (entry.isIntersecting) {
+        animation.start("formEnd");
+        titleAnimation.start("titleEnd");
+      }
+    }, options);
+    observer.observe(myRef.current);
+  });
 
   return (
     <MyWrapper id="contact">
-      <Grid container spacing={2}>
+      <Grid container spacing={2} ref={myRef}>
         <Grid item xs={12}>
-          <Typography variant="h3">
+          <Typography
+            variant="h3"
+            component={motion.div}
+            variants={variants}
+            animate={titleAnimation}
+          >
             Contact
             <Box component="div" className="underline"></Box>
           </Typography>
-          <Grid item xs={12}>
+          <Grid
+            item
+            xs={12}
+            component={motion.div}
+            variants={variants}
+            animate={animation}
+          >
             <Box component="div" className="form-section-text">
               <Typography variant="body1">
                 If you have any questions or suggestions or have any ideas for
@@ -105,7 +159,13 @@ const Form = () => {
             </Box>
           </Grid>
         </Grid>
-        <Grid item xs={12}>
+        <Grid
+          item
+          xs={12}
+          component={motion.div}
+          variants={variants}
+          animate={animation}
+        >
           <form action="POST">
             <Box className="form-input-wrapper">
               <input
