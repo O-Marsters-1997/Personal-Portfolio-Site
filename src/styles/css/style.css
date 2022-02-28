@@ -32,6 +32,10 @@ body {
     height: 40vh !important;
   }
 }
+.project-item-external-icons {
+  z-index: 100 !important;
+}
+
 canvas {
   width: 100vw;
   height: 100vh;

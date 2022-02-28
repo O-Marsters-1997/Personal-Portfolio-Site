@@ -7,6 +7,7 @@ import {
   Box,
   Paper,
   List,
+  Link,
   ListItem,
   ListItemText,
 } from "@mui/material";
@@ -190,6 +191,8 @@ const Projects = () => {
         ".project-item-wrapper-left": {
           marginLeft: "50%",
           ".project-item-external-icons": {
+            zIndex: 100,
+            backgroundColor: "red",
             img: {
               cursor: "pointer",
             },
@@ -391,7 +394,13 @@ const Projects = () => {
               </Box>
             </Box>
             <Box component="div" className="project-item-external-icons">
-              <img src={Github} alt="github-cons-to-source-code" />
+              <Link
+                href="https://github.com/O-Marsters-1997/Flask_cricket_app"
+                target="_blank"
+                rel="noopener"
+              >
+                <img src={Github} alt="github-cons-to-source-code" />
+              </Link>
               <img src={External} alt="external-icon-to-deployed-version" />
             </Box>
           </Grid>
@@ -489,7 +498,13 @@ const Projects = () => {
               </Box>
             </Box>
             <Box component="div" className="project-item-external-icons">
-              <img src={Github} alt="github-cons-to-source-code" />
+              <Link
+                href="https://github.com/O-Marsters-1997/BBCSleighRide"
+                target="_blank"
+                rel="noopener"
+              >
+                <img src={Github} alt="github-cons-to-source-code" />
+              </Link>
               <img src={External} alt="external-icon-to-deployed-version" />
             </Box>
           </Grid>
@@ -587,7 +602,13 @@ const Projects = () => {
               </Box>
             </Box>
             <Box component="div" className="project-item-external-icons">
-              <img src={Github} alt="github-cons-to-source-code" />
+              <Link
+                href="https://github.com/O-Marsters-1997/ClanHub"
+                target="_blank"
+                rel="noopener"
+              >
+                <img src={Github} alt="github-cons-to-source-code" />
+              </Link>
               <img src={External} alt="external-icon-to-deployed-version" />
             </Box>
           </Grid>
