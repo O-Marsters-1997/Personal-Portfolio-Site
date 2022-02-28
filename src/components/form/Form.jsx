@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import emailjs from "emailjs-com";
 import { useInView } from "react-intersection-observer";
 import { useAnimation, motion } from "framer-motion";
@@ -146,7 +146,7 @@ const Form = () => {
       }
     }, options);
     observer.observe(myRef.current);
-  });
+  }, []);
 
   const sendEmail = (e) => {
     console.log("hello");
@@ -167,6 +167,10 @@ const Form = () => {
           console.log(error.text);
         }
       );
+      document.getElementById("form-name").value="";
+      document.getElementById("form-email").value="";
+      document.getElementById("form-message").value="";
+     
   };
 
   return (
@@ -218,6 +222,7 @@ const Form = () => {
               <input
                 type="text"
                 name="name"
+                id="form-name"
                 required
                 placeholder="your name"
                 className="form-input-text"
@@ -227,6 +232,7 @@ const Form = () => {
               <input
                 type="text"
                 name="email"
+                id="form-email"
                 required
                 placeholder="your email"
                 className="form-input-text"
@@ -236,6 +242,7 @@ const Form = () => {
               <textarea
                 name="message"
                 className="form-input-textarea"
+                id="form-message"
                 required
                 rows="8"
               ></textarea>
