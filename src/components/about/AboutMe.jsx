@@ -21,6 +21,9 @@ const AboutMe = () => {
       x: -200,
       y: 100,
       opacity: 0,
+      transition: {
+        duration: 0,
+      },
     },
     leftEnd: {
       x: 0,

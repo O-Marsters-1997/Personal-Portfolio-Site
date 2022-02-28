@@ -1,6 +1,5 @@
-import React, { useEffect } from "react";
-import { useInView } from "react-intersection-observer";
-import { useAnimation } from "framer-motion";
+import React, { useEffect, useRef } from "react";
+import { useAnimation, motion } from "framer-motion";
 import { styled } from "@mui/system";
 import {
   Grid,
@@ -214,24 +213,121 @@ const Projects = () => {
     // Media query for when the page is medium so split view
   }));
 
-  const { ref, inView } = useInView();
-  const animation = useAnimation();
+  const project1Ref = useRef();
+  const project2Ref = useRef();
+  const project3Ref = useRef();
+  const titleRef = useRef();
+
+  const options = {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.3,
+  };
+
+  const variants = {
+    projectLeftStart: { scale: 0.8, opacity: 0, x: -300, y: 100 },
+    projectLeftEnd: {
+      opacity: 1,
+      x: 0,
+      y: 0,
+      scale: 1,
+      transition: { type: "spring", stiffness: 40, damping: 12 },
+    },
+    projectRightStart: { scale: 0.8, opacity: 0, x: 300, y: 100 },
+    projectRightEnd: {
+      opacity: 1,
+      x: 0,
+      y: 0,
+      scale: 1,
+      transition: { type: "spring", stiffness: 40, damping: 12 },
+    },
+    titleStart: {
+      opacity: 0,
+    },
+    titleEnd: {
+      opacity: 1,
+      transition: { type: "spring", stiffness: 30, damping: 18, delay: 0.6 },
+    },
+  };
+
+  const leftAnimation = useAnimation();
+  const left2Animation = useAnimation();
+  const rightAnimation = useAnimation();
+  const titleAnimation = useAnimation();
 
   useEffect(() => {
-    if (inView) {
-      console.log("yes");
-    }
-  }, [inView]);
+    // four different intersection observers for three different projects
+
+    const observer1 = new IntersectionObserver((entries) => {
+      const entry = entries[0];
+      if (!entry.isIntersecting) {
+        leftAnimation.start("projectLeftStart");
+        titleAnimation.start("titleStart");
+      }
+      if (entry.isIntersecting) {
+        leftAnimation.start("projectLeftEnd");
+        titleAnimation.start("titleEnd");
+      }
+    }, options);
+    observer1.observe(project1Ref.current);
+
+    const observer2 = new IntersectionObserver((entries) => {
+      const entry = entries[0];
+      if (!entry.isIntersecting) {
+        rightAnimation.start("projectRightStart");
+      }
+      if (entry.isIntersecting) {
+        rightAnimation.start("projectRightEnd");
+      }
+    }, options);
+    observer2.observe(project2Ref.current);
+
+    const observer3 = new IntersectionObserver((entries) => {
+      const entry = entries[0];
+      if (!entry.isIntersecting) {
+        left2Animation.start("projectLeftStart");
+      }
+      if (entry.isIntersecting) {
+        left2Animation.start("projectLeftEnd");
+      }
+    }, options);
+    observer3.observe(project3Ref.current);
+
+    const titleObserver = new IntersectionObserver((entries) => {
+      const entry = entries[0];
+      if (!entry.isIntersecting) {
+        titleAnimation.start("titleStart");
+      }
+      if (entry.isIntersecting) {
+        titleAnimation.start("titleEnd");
+      }
+    }, options);
+    titleObserver.observe(project3Ref.current);
+  });
+
   return (
     <MyProjects id="projects">
       <Grid container spacing={2}>
         <Grid item xs={12}>
-          <Typography variant="h3">
+          <Typography
+            variant="h3"
+            ref={titleRef}
+            component={motion.h3}
+            variants={variants}
+            animate={titleAnimation}
+          >
             Projects
             <Box component="div" className="underline"></Box>
           </Typography>
         </Grid>
-        <Grid container className="project-item-container">
+        <Grid
+          container
+          className="project-item-container"
+          ref={project1Ref}
+          component={motion.div}
+          variants={variants}
+          animate={leftAnimation}
+        >
           <Grid item xs={12} md={6} className="project-item-wrapper-left">
             <img src={Flask} className="project-item-image" />
             <Box className="project-item-image-overlay">
@@ -340,7 +436,14 @@ const Projects = () => {
         </Grid>
 
         {/* BBC Sleigh Ride starts here */}
-        <Grid container className="project-item-container">
+        <Grid
+          container
+          className="project-item-container"
+          ref={project2Ref}
+          component={motion.div}
+          variants={variants}
+          animate={rightAnimation}
+        >
           <Grid item xs={12} md={6} className="project-item-wrapper-left">
             <img src={Sleigh} className="project-item-image" />
             <Box className="project-item-image-overlay">
@@ -425,7 +528,14 @@ const Projects = () => {
         </Grid>
 
         {/* Clanhub Starts here */}
-        <Grid container className="project-item-container">
+        <Grid
+          container
+          className="project-item-container"
+          ref={project3Ref}
+          component={motion.div}
+          variants={variants}
+          animate={left2Animation}
+        >
           <Grid item xs={12} md={6} className="project-item-wrapper-left">
             <img src={Clanhub} className="project-item-image" />
             <Box className="project-item-image-overlay">
