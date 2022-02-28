@@ -401,7 +401,7 @@ const Projects = () => {
               >
                 <img src={Github} alt="github-cons-to-source-code" />
               </Link>
-              <img src={External} alt="external-icon-to-deployed-version" />
+              {/* <img src={External} alt="external-icon-to-deployed-version" /> */}
             </Box>
           </Grid>
 
@@ -505,7 +505,7 @@ const Projects = () => {
               >
                 <img src={Github} alt="github-cons-to-source-code" />
               </Link>
-              <img src={External} alt="external-icon-to-deployed-version" />
+              {/* <img src={External} alt="external-icon-to-deployed-version" /> */}
             </Box>
           </Grid>
 
@@ -609,7 +609,7 @@ const Projects = () => {
               >
                 <img src={Github} alt="github-cons-to-source-code" />
               </Link>
-              <img src={External} alt="external-icon-to-deployed-version" />
+              {/* <img src={External} alt="external-icon-to-deployed-version" /> */}
             </Box>
           </Grid>
 
