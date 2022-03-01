@@ -74,8 +74,11 @@ const Canvas = ({ theme }) => {
     let particles;
     function init() {
       particles = [];
+      let numParticles;
 
-      for (let i = 0; i < 400; i++) {
+      canvas.width > 450 ? (numParticles = 400) : (numParticles = 75);
+
+      for (let i = 0; i < numParticles; i++) {
         const canvasWidth = canvas.width + canvas.width / 2;
         const canvasHeight = canvas.height + canvas.width / 2;
         const x = Math.random() * canvasWidth - canvasWidth / 2;

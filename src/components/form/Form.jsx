@@ -136,11 +136,11 @@ const Form = () => {
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       const entry = entries[0];
-      if (!entry.isIntersecting) {
+      if (!entry.isIntersecting && window.innerWidth >= 450) {
         animation.start("formStart");
         titleAnimation.start("titleStart");
       }
-      if (entry.isIntersecting) {
+      if (entry.isIntersecting && window.innerWidth >= 450) {
         animation.start("formEnd");
         titleAnimation.start("titleEnd");
       }

@@ -96,11 +96,11 @@ const Skills = () => {
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       const entry = entries[0];
-      if (!entry.isIntersecting) {
+      if (!entry.isIntersecting && window.innerWidth >= 450) {
         animation.start("skillsStart");
         titleAnimation.start("titleStart");
       }
-      if (entry.isIntersecting) {
+      if (entry.isIntersecting && window.innerWidth >= 450) {
         animation.start("skillsEnd");
         titleAnimation.start("titleEnd");
       }

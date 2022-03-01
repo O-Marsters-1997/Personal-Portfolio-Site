@@ -17,7 +17,7 @@ let theme = createTheme({
       modifier: "rgba(60,68,92, 1)",
       overlay: "rgba(80, 89, 121, .62)",
       navAccent: "rgba(95, 112, 139, 1)",
-      project: "rgba(60, 68, 92, .92)",
+      project: "rgba(60, 68, 92, .72)",
       footer: "#21273bff",
       footerShadow: "#21283dff",
     },

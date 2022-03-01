@@ -8,17 +8,22 @@ import MenuSmall from "./components/navbar/MenuSmall";
 import CanvasContainer from "../src/containers/CanvasContainer";
 import AboutContainer from "./containers/AboutContainer";
 import Projects from "./components/projects/Projects";
-import Form from "./components/form/Form"
-import Footer from "./components/footer/Footer"
+import Form from "./components/form/Form";
+import Footer from "./components/footer/Footer";
 import { ThemeProvider, Grid, CssBaseline, Typography } from "@mui/material";
 import { ConstructionOutlined, CoPresentOutlined } from "@mui/icons-material";
 
 function App() {
   const [mobileMenu, setMobileMenu] = useState(false);
+  const [width, setWidth] = useState(window.innerWidth)
 
-  const onMobileClick = () => {
-    setMobileMenu(!mobileMenu);
-  };
+ useEffect(() => {
+   window.addEventListener("resize", ()=> {
+     if (window.innerWidth <= 450) {
+      setWidth(window.innerWidth);
+     }
+   })
+ })
 
   useEffect(() => {
     let hamburgerLine = document.getElementById("hamburger-line");
@@ -36,6 +41,10 @@ function App() {
       setMobileMenu(false);
     }
   });
+
+  const onMobileClick = () => {
+    setMobileMenu(!mobileMenu);
+  };
 
   return (
     <ThemeProvider theme={theme}>

@@ -192,7 +192,7 @@ const Projects = () => {
           marginLeft: "50%",
           ".project-item-external-icons": {
             zIndex: 100,
-            backgroundColor: "red",
+           
             img: {
               cursor: "pointer",
             },
@@ -263,11 +263,11 @@ const Projects = () => {
 
     const observer1 = new IntersectionObserver((entries) => {
       const entry = entries[0];
-      if (!entry.isIntersecting) {
+      if (!entry.isIntersecting && window.innerWidth >= 450) {
         leftAnimation.start("projectLeftStart");
         titleAnimation.start("titleStart");
       }
-      if (entry.isIntersecting) {
+      if (entry.isIntersecting && window.innerWidth >= 450) {
         leftAnimation.start("projectLeftEnd");
         titleAnimation.start("titleEnd");
       }
@@ -276,10 +276,10 @@ const Projects = () => {
 
     const observer2 = new IntersectionObserver((entries) => {
       const entry = entries[0];
-      if (!entry.isIntersecting) {
+      if (!entry.isIntersecting && window.innerWidth >= 450) {
         rightAnimation.start("projectRightStart");
       }
-      if (entry.isIntersecting) {
+      if (entry.isIntersecting && window.innerWidth >= 450) {
         rightAnimation.start("projectRightEnd");
       }
     }, options);
@@ -287,10 +287,10 @@ const Projects = () => {
 
     const observer3 = new IntersectionObserver((entries) => {
       const entry = entries[0];
-      if (!entry.isIntersecting) {
+      if (!entry.isIntersecting && window.innerWidth >= 450) {
         left2Animation.start("projectLeftStart");
       }
-      if (entry.isIntersecting) {
+      if (entry.isIntersecting && window.innerWidth >= 450) {
         left2Animation.start("projectLeftEnd");
       }
     }, options);
@@ -298,10 +298,10 @@ const Projects = () => {
 
     const titleObserver = new IntersectionObserver((entries) => {
       const entry = entries[0];
-      if (!entry.isIntersecting) {
+      if (!entry.isIntersecting && window.innerWidth >= 450) {
         titleAnimation.start("titleStart");
       }
-      if (entry.isIntersecting) {
+      if (entry.isIntersecting && window.innerWidth >= 450) {
         titleAnimation.start("titleEnd");
       }
     }, options);

@@ -8,85 +8,6 @@ import PersonalProfileImage from "../../assets/images/PersonalProfileImage.jpg";
 import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
 
 const AboutMe = () => {
-  const myRef = useRef();
-
-  const options = {
-    root: null,
-    rootMargin: "0px",
-    threshold: 0.3,
-  };
-
-  const variants = {
-    leftStart: {
-      x: "-10vw",
-      y: 100,
-      opacity: 0,
-      transition: {
-        duration: 0,
-      },
-    },
-    leftEnd: {
-      x: 0,
-      y: 0,
-      opacity: 1,
-      transition: {
-        type: "spring",
-        stiffness: 40,
-        damping: 12,
-      },
-    },
-    rightStart: {
-      x: "10vw",
-      y: 100,
-      opacity: 0,
-    },
-    rightEnd: {
-      x: 0,
-      y: 0,
-      opacity: 1,
-      transition: {
-        type: "spring",
-        stiffness: 40,
-        damping: 12,
-      },
-    },
-    titleStart: {
-      opacity: 0,
-      x: 0,
-    },
-    titleEnd: {
-      opacity: 1,
-      x: 0,
-      transition: {
-        type: "spring",
-        stiffness: 30,
-        damping: 18,
-        delay: 0.6,
-      },
-    },
-  };
-
-  const leftAnimation = useAnimation();
-  const rightAnimation = useAnimation();
-  const titleAnimation = useAnimation();
-
-  useEffect(() => {
-    const observer = new IntersectionObserver((entries) => {
-      const entry = entries[0];
-      if (entry.isIntersecting) {
-        leftAnimation.start("leftEnd");
-        rightAnimation.start("rightEnd");
-        titleAnimation.start("titleEnd");
-      }
-      if (!entry.isIntersecting) {
-        leftAnimation.start("leftStart");
-        rightAnimation.start("rightStart");
-        titleAnimation.start("titleStart");
-      }
-    }, options);
-    observer.observe(myRef.current);
-  });
-
   const MyWrapper = styled("div")(({ theme }) => ({
     color: theme.palette.text.primary,
     padding: "5rem 0",
@@ -190,6 +111,88 @@ const AboutMe = () => {
     },
   }));
 
+  const myRef = useRef();
+
+  const [initial, setInitial] = useState(true)
+
+  const options = {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.3,
+  };
+
+  const variants = {
+    leftStart: {
+      x: "-10vw",
+      y: 100,
+      opacity: 0,
+      transition: {
+        duration: 0,
+      },
+    },
+    leftEnd: {
+      x: 0,
+      y: 0,
+      opacity: 1,
+      transition: {
+        type: "spring",
+        stiffness: 40,
+        damping: 12,
+      },
+    },
+    rightStart: {
+      x: "10vw",
+      y: 100,
+      opacity: 0,
+    },
+    rightEnd: {
+      x: 0,
+      y: 0,
+      opacity: 1,
+      transition: {
+        type: "spring",
+        stiffness: 40,
+        damping: 12,
+      },
+    },
+    titleStart: {
+      opacity: 0,
+      x: 0,
+    },
+    titleEnd: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        type: "spring",
+        stiffness: 30,
+        damping: 18,
+        delay: 0.6,
+      },
+    },
+  };
+
+  const leftAnimation = useAnimation();
+  const rightAnimation = useAnimation();
+  const titleAnimation = useAnimation();
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      const entry = entries[0];
+      if (entry.isIntersecting && window.innerWidth >= 450) {
+        leftAnimation.start("leftEnd");
+        rightAnimation.start("rightEnd");
+        titleAnimation.start("titleEnd");
+  
+      }
+      if (!entry.isIntersecting && window.innerWidth >= 450) {
+        leftAnimation.start("leftStart");
+        rightAnimation.start("rightStart");
+        titleAnimation.start("titleStart");
+      }
+    }, options);
+    observer.observe(myRef.current);
+  });
+
   return (
     <MyWrapper id="about">
       <Grid ref={myRef} container spacing={2}>
@@ -211,7 +214,7 @@ const AboutMe = () => {
           md={6}
           component={motion.div}
           variants={variants}
-          animate={leftAnimation}
+          animate={leftAnimation }
         >
           <Box component="div">
             <Typography variant="body1">
