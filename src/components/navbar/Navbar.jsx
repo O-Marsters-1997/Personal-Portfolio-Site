@@ -117,21 +117,26 @@ const Navbar = ({ mobileMenu, onMobileClick }) => {
             </Link>
           </Box>
           <Box component="div" className="nav-wrapper">
-            <ScrollLink to="about" smooth={true} duration={1000}>
+            <ScrollLink to="about" smooth={true} duration={1500} >
               <Typography variant="h5">about</Typography>
             </ScrollLink>
             <Typography variant="h5">
               <ScrollLink
                 to="projects"
                 smooth={true}
-                duration={1000}
-                offset={-150}
+                duration={1500}
+                offset={-300}
               >
                 projects
               </ScrollLink>
             </Typography>
             <Typography variant="h5">
-              <ScrollLink to="contact" smooth={true} duration={1000}>
+              <ScrollLink
+                to="contact"
+                smooth={true}
+                duration={1500}
+                offset={-100}
+              >
                 contact
               </ScrollLink>
             </Typography>

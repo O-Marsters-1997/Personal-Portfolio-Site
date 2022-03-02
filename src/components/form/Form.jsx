@@ -104,8 +104,6 @@ const Form = () => {
     },
   }));
 
-  const myRef = useRef();
-
   const options = {
     root: null,
     rootMargin: "0px",
@@ -133,21 +131,6 @@ const Form = () => {
   const animation = useAnimation();
   const titleAnimation = useAnimation();
 
-  useEffect(() => {
-    const observer = new IntersectionObserver((entries) => {
-      const entry = entries[0];
-      if (!entry.isIntersecting && window.innerWidth >= 450) {
-        animation.start("formStart");
-        titleAnimation.start("titleStart");
-      }
-      if (entry.isIntersecting && window.innerWidth >= 450) {
-        animation.start("formEnd");
-        titleAnimation.start("titleEnd");
-      }
-    }, options);
-    observer.observe(myRef.current);
-  }, []);
-
   const sendEmail = (e) => {
     console.log("hello");
     e.preventDefault();
@@ -167,32 +150,20 @@ const Form = () => {
           console.log(error.text);
         }
       );
-      document.getElementById("form-name").value="";
-      document.getElementById("form-email").value="";
-      document.getElementById("form-message").value="";
-     
+    document.getElementById("form-name").value = "";
+    document.getElementById("form-email").value = "";
+    document.getElementById("form-message").value = "";
   };
 
   return (
     <MyWrapper id="contact">
-      <Grid container spacing={2} ref={myRef}>
+      <Grid container spacing={2}>
         <Grid item xs={12}>
-          <Typography
-            variant="h3"
-            component={motion.div}
-            variants={variants}
-            animate={titleAnimation}
-          >
+          <Typography variant="h3">
             Contact
             <Box component="div" className="underline"></Box>
           </Typography>
-          <Grid
-            item
-            xs={12}
-            component={motion.div}
-            variants={variants}
-            animate={animation}
-          >
+          <Grid item xs={12}>
             <Box component="div" className="form-section-text">
               <Typography variant="body1">
                 If you have any questions or suggestions or have any ideas for
