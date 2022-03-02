@@ -18,17 +18,8 @@ const AboutMe = () => {
     },
     ".MuiTypography-h3": {
       width: "fit-content",
-      // fontSize: "3.8rem",
       margin: "0 auto 7.5vh auto",
       textTransform: "uppercase",
-
-      // ".underline": {
-      //   width: "60%",
-      //   margin: "1.8rem auto 2.2rem auto",
-      //   height: "4px",
-      //   backgroundColor: theme.palette.text.primary,
-      //   borderRadius: "5px",
-      // },
     },
     ".MuiTypography-body1": {
       marginBottom: "1.8rem",
@@ -111,7 +102,7 @@ const AboutMe = () => {
 
   const myRef = useRef();
 
-  const [initial, setInitial] = useState(true)
+  const [initial, setInitial] = useState(true);
 
   const options = {
     root: null,
@@ -180,7 +171,6 @@ const AboutMe = () => {
         leftAnimation.start("leftEnd");
         rightAnimation.start("rightEnd");
         titleAnimation.start("titleEnd");
-  
       }
       if (!entry.isIntersecting && window.innerWidth >= 450) {
         leftAnimation.start("leftStart");
@@ -212,13 +202,13 @@ const AboutMe = () => {
           md={6}
           component={motion.div}
           variants={variants}
-          animate={leftAnimation }
+          animate={leftAnimation}
         >
           <Box component="div">
             <Typography variant="body1">
               Hi, my name is Olly. Having graduated with a degree in
-              international realtions, I decided to become a software developer
-              because of the transofrmational impact technology can have in
+              international relations, I decided to pursue software development
+              because of the transformational impact technology can have in
               people's lives.
             </Typography>
             <Typography variant="body1">

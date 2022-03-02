@@ -492,7 +492,7 @@ const Projects = () => {
                   <img src={CSS} alt="" />
                   <img src={JS} alt="" />
                   <img src={RE} alt="" />
-                  <img src={PSQL} alt="" />
+                  <img src={MON} alt="" />
                 </Box>
               </Box>
             </Box>
@@ -532,11 +532,11 @@ const Projects = () => {
               </List>
             </Paper>
             <Box component="div" className="project-item-icons-wrapper">
-              <img src={SASS} alt="" />
-              <img src={JAV} alt="" />
-              <img src={SPR} alt="" />
+              <img src={HTML} alt="" />
+              <img src={CSS} alt="" />
+              <img src={JS} alt="" />
               <img src={RE} alt="" />
-              <img src={FIRE} alt="" />
+              <img src={MON} alt="" />
             </Box>
           </Grid>
         </Grid>
@@ -636,11 +636,11 @@ const Projects = () => {
               </List>
             </Paper>
             <Box component="div" className="project-item-icons-wrapper">
-              <img src={HTML} alt="" />
               <img src={SASS} alt="" />
-              <img src={PY} alt="" />
-              <img src={FLASK} alt="" />
-              <img src={PSQL} alt="" />
+              <img src={JAV} alt="" />
+              <img src={SPR} alt="" />
+              <img src={RE} alt="" />
+              <img src={FIRE} alt="" />
             </Box>
           </Grid>
         </Grid>
