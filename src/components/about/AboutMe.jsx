@@ -72,6 +72,7 @@ const AboutMe = () => {
         height: "100%",
         borderRadius: "10px",
         position: "relative",
+        objectFit: "cover",
         zIndex: 50,
       },
 
@@ -79,8 +80,9 @@ const AboutMe = () => {
         zIndex: "100",
         position: "absolute",
         top: 0,
+        bottom: 8,
         width: "80%",
-        height: "100%",
+       
         borderRadius: "10px",
         backgroundColor: theme.palette.primary.overlay,
         transition: "background-color .5s ease-in",
