@@ -25,7 +25,15 @@ const CanvasOverlay = ({}) => {
     width: "100%",
     color: theme.palette.text.primary,
 
+    ".overlay-wrapper": {
+      width: "fit-content",
+      [theme.breakpoints.down("sm")]: {
+        marginLeft: "2em",
+      },
+    },
+
     ".MuiTypography-root": {
+      width: "fit-content",
       padding: ".4rem",
       "&:last-child": {
         color: "blue",
@@ -42,13 +50,8 @@ const CanvasOverlay = ({}) => {
 
     ".overlay-text-title": {
       display: "flex",
+      width: "fit-content",
       flexDirection: "row",
-      [theme.breakpoints.down("md")]: {
-        flexDirection: "column",
-        span: {
-          padding: 0,
-        },
-      },
     },
 
     ".MuiTypography-h5": {
@@ -77,8 +80,7 @@ const CanvasOverlay = ({}) => {
           Olly Marsters
         </Typography>
         <Typography variant="h2" className="overlay-text-title">
-          <span className="span-separation">I'm a software </span>
-          <span>engineer</span>
+          I make things for the web
         </Typography>
         <Link to="about" smooth={true} duration={1500} offset={-100}>
           <Button variant="outlined" className="overlay-button">
