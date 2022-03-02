@@ -26,12 +26,6 @@ const Skills = () => {
       width: "clamp(250px, 75vw, 1250px)",
       margin: "0 auto",
 
-      ".MuiTypography-h3": {
-        textTransform: "uppercase",
-        margin: "0 auto 7.5vh auto",
-        width: "fit-content",
-      },
-
       ".skills-grid-item": {
         textAlign: "center",
         margin: "0 auto",
@@ -39,16 +33,14 @@ const Skills = () => {
         img: {
           height: "4rem",
           marginTop: "1rem",
+          [theme.breakpoints.down("sm")]: {
+            height: "3.5rem",
+          },
 
           "&:hover": {
             filter:
               "brightness(0) saturate(100%) invert(85%) sepia(28%) saturate(2489%) hue-rotate(322deg) brightness(102%) contrast(88%)",
           },
-        },
-
-        ".MuiTypography-subtitle": {
-          display: "block",
-          fontSize: "1.35rem",
         },
       },
     },
@@ -123,73 +115,73 @@ const Skills = () => {
             <Grid item xs={6} sm={4} md={3}>
               <Box className="skills-grid-item">
                 <img src={HTML} className="skills-grid-image"></img>
-                <Typography variant="subtitle">Html</Typography>
+                <Typography variant="subtitle2">Html</Typography>
               </Box>
             </Grid>
             <Grid item xs={6} sm={4} md={3}>
               <Box className="skills-grid-item">
                 <img src={CSS} className="skills-grid-image"></img>
-                <Typography variant="subtitle">Css</Typography>
+                <Typography variant="subtitle2">Css</Typography>
               </Box>
             </Grid>
             <Grid item xs={6} sm={4} md={3}>
               <Box className="skills-grid-item">
                 <img src={JS} className="skills-grid-image"></img>
-                <Typography variant="subtitle">Javascript</Typography>
+                <Typography variant="subtitle2">Javascript</Typography>
               </Box>
             </Grid>
             <Grid item xs={6} sm={4} md={3}>
               <Box className="skills-grid-item">
                 <img src={SASS} className="skills-grid-image"></img>
-                <Typography variant="subtitle">Sass</Typography>
+                <Typography variant="subtitle2">Sass</Typography>
               </Box>
             </Grid>
             <Grid item xs={6} sm={4} md={3}>
               <Box className="skills-grid-item">
                 <img src={RE} className="skills-grid-image"></img>
-                <Typography variant="subtitle">React</Typography>
+                <Typography variant="subtitle2">React</Typography>
               </Box>
             </Grid>
             <Grid item xs={6} sm={4} md={3}>
               <Box className="skills-grid-item">
                 <img src={FIRE} className="skills-grid-image"></img>
-                <Typography variant="subtitle">Firebase</Typography>
+                <Typography variant="subtitle2">Firebase</Typography>
               </Box>
             </Grid>
             <Grid item xs={6} sm={4} md={3}>
               <Box className="skills-grid-item">
                 <img src={PY} className="skills-grid-image"></img>
-                <Typography variant="subtitle">Python</Typography>
+                <Typography variant="subtitle2">Python</Typography>
               </Box>
             </Grid>
             <Grid item xs={6} sm={4} md={3}>
               <Box className="skills-grid-item">
                 <img src={JAVA} className="skills-grid-image"></img>
-                <Typography variant="subtitle">Java</Typography>
+                <Typography variant="subtitle2">Java</Typography>
               </Box>
             </Grid>
             <Grid item xs={6} sm={4} md={3}>
               <Box className="skills-grid-item">
                 <img src={SPR} className="skills-grid-image"></img>
-                <Typography variant="subtitle">Spring</Typography>
+                <Typography variant="subtitle2">Spring</Typography>
               </Box>
             </Grid>
             <Grid item xs={6} sm={4} md={3}>
               <Box className="skills-grid-item">
                 <img src={PSQL} className="skills-grid-image"></img>
-                <Typography variant="subtitle">PostgreSQL</Typography>
+                <Typography variant="subtitle2">PostgreSQL</Typography>
               </Box>
             </Grid>
             <Grid item xs={6} sm={4} md={3}>
               <Box className="skills-grid-item">
                 <img src={GIT} className="skills-grid-image"></img>
-                <Typography variant="subtitle">Git</Typography>
+                <Typography variant="subtitle2">Git</Typography>
               </Box>
             </Grid>
             <Grid item xs={6} sm={4} md={3}>
               <Box className="skills-grid-item">
                 <img src={LIN} className="skills-grid-image"></img>
-                <Typography variant="subtitle">Linux</Typography>
+                <Typography variant="subtitle2">Linux</Typography>
               </Box>
             </Grid>
           </Grid>

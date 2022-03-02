@@ -113,6 +113,7 @@ theme = createTheme(theme, {
     },
     subtitle2: {
       fontFamily: "Raleway, Arial",
+      fontSize: "1.15rem",
     },
   },
 
