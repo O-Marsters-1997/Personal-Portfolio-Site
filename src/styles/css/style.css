@@ -29,7 +29,7 @@ body {
 @media (max-width: 400px) {
   .project-item-container,
 .project-item-wrapper-left {
-    height: 40vh !important;
+    height: 120vw !important;
   }
 }
 .project-item-external-icons {

@@ -35,9 +35,7 @@ const Projects = () => {
     margin: "8.5rem auto 8.5rem auto",
     position: "relative",
 
-    ".MuiTypography-h3": {
-      
-    },
+    ".MuiTypography-h3": {},
 
     ".project-item-container": {
       position: "relative",
@@ -62,6 +60,7 @@ const Projects = () => {
         position: "relative",
 
         ".project-item-overlay-text": {
+          position: "relative",
           height: "100%",
           padding: "2rem",
         },
@@ -81,6 +80,9 @@ const Projects = () => {
         backgroundColor: theme.palette.primary.project,
         borderRadius: "10px",
         transition: "all .5s ease-in",
+        [theme.breakpoints.down("md")]: {
+          backgroundColor: theme.palette.primary.projectSmall,
+        },
 
         "&:hover": {
           [theme.breakpoints.up("md")]: {
@@ -137,6 +139,13 @@ const Projects = () => {
             "brightness(0) saturate(100%) invert(85%) sepia(28%) saturate(2489%) hue-rotate(322deg) brightness(102%) contrast(88%)",
         },
       },
+    },
+
+    ".project-item-icons-wrapper-small": {
+      position: "absolute",
+      left: "10%",
+      right: "10%",
+      bottom: "10%",
     },
 
     ".project-item-bullet-wrapper": {

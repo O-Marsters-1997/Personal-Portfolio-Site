@@ -49,6 +49,9 @@ const Form = () => {
         marginBottom: "2rem",
         fontSize: "1.6rem",
         color: theme.palette.text.secondary,
+        [theme.breakpoints.down("sm")]: {
+          fontSize: "1.2rem",
+        },
       },
     },
     ".button-wrapper": {
