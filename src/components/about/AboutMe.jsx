@@ -28,30 +28,29 @@ const AboutMe = () => {
         fontWeight: 400,
         marginLeft: ".4rem",
       },
+    },
+    ".down-arrow-wrapper": {
+      width: "fit-content",
+      height: "fit-content",
+      padding: ".65rem",
+      backgroundColor: theme.palette.primary.modifier,
+      display: "flex",
+      flexDirection: "column",
+      justifyContent: "center",
+      alignItems: "center",
+      borderRadius: "50%",
+      border: `1px solid ${theme.palette.primary.navAccent}`,
+      marginTop: "1.2rem",
+      cursor: "pointer",
+      "&:hover": {
+        border: `1px solid ${theme.palette.text.accent}`,
+      },
 
-      ".down-arrow-wrapper": {
-        width: "fit-content",
-        height: "fit-content",
-        padding: ".65rem",
-        backgroundColor: theme.palette.primary.modifier,
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
-        alignItems: "center",
-        borderRadius: "50%",
-        border: `1px solid ${theme.palette.primary.navAccent}`,
-        marginTop: "1.2rem",
-        cursor: "pointer",
+      ".down-arrow": {
+        verticalAlign: "middle",
+        fontSize: "2.5rem",
         "&:hover": {
-          border: `1px solid ${theme.palette.text.accent}`,
-        },
-
-        ".down-arrow": {
-          verticalAlign: "middle",
-          fontSize: "2rem",
-          "&:hover": {
-            color: theme.palette.text.accent,
-          },
+          color: theme.palette.text.accent,
         },
       },
     },
@@ -225,7 +224,7 @@ const AboutMe = () => {
                 form below.
               </Typography>
               <Box className="down-arrow-wrapper">
-                <Link to="contact" smooth={true} duration={1000}>
+                <Link to="contact" smooth={true} duration={2000} offset={-100}>
                   <ArrowDownwardIcon className="down-arrow" />
                 </Link>
               </Box>
