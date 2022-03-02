@@ -18,22 +18,20 @@ const AboutMe = () => {
     },
     ".MuiTypography-h3": {
       width: "fit-content",
-      fontSize: "3.8rem",
+      // fontSize: "3.8rem",
       margin: "0 auto 7.5vh auto",
       textTransform: "uppercase",
 
-      ".underline": {
-        width: "60%",
-        margin: "1.8rem auto 2.2rem auto",
-        height: "4px",
-        backgroundColor: theme.palette.text.primary,
-        borderRadius: "5px",
-      },
+      // ".underline": {
+      //   width: "60%",
+      //   margin: "1.8rem auto 2.2rem auto",
+      //   height: "4px",
+      //   backgroundColor: theme.palette.text.primary,
+      //   borderRadius: "5px",
+      // },
     },
     ".MuiTypography-body1": {
       marginBottom: "1.8rem",
-      fontSize: "1.6rem",
-      lineHeight: "2.15rem",
       span: {
         color: theme.palette.text.accent,
         fontWeight: 400,

@@ -42,9 +42,45 @@ let theme = createTheme({
 
 // Update the theme so that more values can be added on top of it
 theme = createTheme(theme, {
+  breakpoints: {
+    values: {
+      xs: 0,
+      vs: 300,
+      sm: 500,
+      md: 900,
+      lg: 1200,
+      xl: 1536,
+    },
+  },
   typography: {
+    // This is applied to the rules on the top page section
+    h2: {
+      fontFamily: "Cabin, Arial",
+      letterSpacing: ".05em",
+    },
+
+    // H3 rules are applied to all the main section headings
     h3: {
       fontFamily: "Cabin, Arial",
+      fontSize: "3.8rem",
+      textTransform: "uppercase",
+      margin: "0 auto 7.5vh auto",
+      width: "fit-content",
+
+      ".underline": {
+        width: "60%",
+        margin: "1.8rem auto 3.2rem auto",
+        height: "4px",
+        backgroundColor: theme.palette.text.primary,
+        borderRadius: "5px",
+      },
+      // for mobile deveices the headings are smaller
+      [theme.breakpoints.down("sm")]: {
+        fontSize: "3.05rem",
+        ".underline": {
+          margin: "1.4rem auto 2.8rem auto",
+        },
+      },
     },
     h4: {
       fontFamily: "Raleway, Arial",
@@ -60,8 +96,16 @@ theme = createTheme(theme, {
     body1: {
       fontFamily: "roboto",
       fontWeight: 300,
-      fontSize: "20px",
-      lineHeight: "1.75rem",
+      fontSize: "1.3em",
+      lineHeight: "2.45rem",
+      [theme.breakpoints.down("lg")]: {
+        fontSize: "1.25em",
+        lineHeight: "2.25rem",
+      },
+      [theme.breakpoints.down("sm")]: {
+        fontSize: "1.115em",
+        lineHeight: "1.75rem",
+      },
     },
     subtitle: {
       fontFamily: "Raleway, Arial",
@@ -71,16 +115,7 @@ theme = createTheme(theme, {
       fontFamily: "Raleway, Arial",
     },
   },
-  breakpoints: {
-    values: {
-      xs: 0,
-      vs: 300,
-      sm: 500,
-      md: 900,
-      lg: 1200,
-      xl: 1536,
-    },
-  },
+
   components: {
     // CSS Baseline for font face (self host fonts)
     MuiCssBaseline: {

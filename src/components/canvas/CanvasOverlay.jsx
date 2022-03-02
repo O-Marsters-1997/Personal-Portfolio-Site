@@ -36,7 +36,7 @@ const CanvasOverlay = ({}) => {
       },
     },
 
-    ".MuiTypography-h3": {
+    ".MuiTypography-h2": {
       fontSize: "clamp( 2.7rem, 5vw, 4.25rem)",
     },
 
@@ -73,10 +73,10 @@ const CanvasOverlay = ({}) => {
     <TitleWrapper className="overlay-container">
       <Box className="overlay-wrapper">
         <Typography variant="h5">Hello, my name is</Typography>
-        <Typography variant="h3" className="overlay-text-accent">
+        <Typography variant="h2" className="overlay-text-accent">
           Olly Marsters
         </Typography>
-        <Typography variant="h3" className="overlay-text-title">
+        <Typography variant="h2" className="overlay-text-title">
           <span className="span-separation">I'm a software </span>
           <span>engineer</span>
         </Typography>

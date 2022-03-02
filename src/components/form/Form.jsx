@@ -22,28 +22,12 @@ const Form = () => {
       width: "clamp(250px, 75vw, 1250px)",
       margin: "0 auto",
 
-      ".MuiTypography-h3": {
-        fontSize: "3.8rem",
-        width: "fit-content",
-        margin: "0 auto 7.5vh auto",
-        textTransform: "uppercase",
-
-        ".underline": {
-          width: "60%",
-          margin: "1.8rem auto 2.2rem auto",
-          height: "4px",
-          backgroundColor: theme.palette.text.primary,
-          borderRadius: "5px",
-        },
-      },
       ".form-section-text": {
         [theme.breakpoints.down("md")]: {
           textAlign: "center",
         },
       },
       ".MuiTypography-body1": {
-        fontSize: "1.6rem",
-        lineHeight: "2.15rem",
         marginBottom: "2rem",
         ".email-bold": {
           fontWeight: "bold",

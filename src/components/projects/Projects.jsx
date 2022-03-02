@@ -36,18 +36,7 @@ const Projects = () => {
     position: "relative",
 
     ".MuiTypography-h3": {
-      textTransform: "uppercase",
-      fontSize: "3.8rem",
-      margin: "0 auto 7.5vh auto",
-      width: "fit-content",
-
-      ".underline": {
-        width: "60%",
-        margin: "1.8rem auto 3.2rem auto",
-        height: "4px",
-        backgroundColor: theme.palette.text.primary,
-        borderRadius: "5px",
-      },
+      
     },
 
     ".project-item-container": {
@@ -192,7 +181,7 @@ const Projects = () => {
           marginLeft: "50%",
           ".project-item-external-icons": {
             zIndex: 100,
-           
+
             img: {
               cursor: "pointer",
             },
