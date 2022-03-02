@@ -23,6 +23,9 @@ const Footer = () => {
         fontSize: ".905rem",
         letterSpacing: ".1em",
         marginRight: ".6rem",
+        [theme.breakpoints.down("sm")]: {
+          fontSize: ".665rem",
+        },
       },
       "&:first-of-type::before": {
         content: "'\\00A9'",
@@ -32,6 +35,10 @@ const Footer = () => {
         fontSize: "1.2em",
         transform: "translateY(-2.5px)",
         fontStyle: "normal",
+        [theme.breakpoints.down("sm")]: {
+          fontSize: ".95rem",
+          transform: "translateY(-5px)",
+        },
       },
 
       "	.github-icon": {
@@ -40,6 +47,9 @@ const Footer = () => {
         transition: "all .25s ease-out",
         "&:hover": {
           color: theme.palette.text.accent,
+        },
+        [theme.breakpoints.down("sm")]: {
+          fontSize: "1rem",
         },
       },
     },

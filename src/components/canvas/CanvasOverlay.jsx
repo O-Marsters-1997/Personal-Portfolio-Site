@@ -80,7 +80,7 @@ const CanvasOverlay = ({}) => {
           <span className="span-separation">I'm a software </span>
           <span>engineer</span>
         </Typography>
-        <Link to="contact" smooth={true} duration={2000} offset={-250}>
+        <Link to="about" smooth={true} duration={1500} offset={-100}>
           <Button variant="outlined" className="overlay-button">
             <Box className="overlay-button-wrapper">
               <Typography>See more</Typography>
