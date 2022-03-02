@@ -31,12 +31,12 @@ const Navbar = ({ mobileMenu, onMobileClick }) => {
       marginLeft: "5%",
       display: "flex",
       width: "30%",
-      padding: "1.5em 0",
+      padding: "1.05em 0",
       justifyContnet: "space-evenly",
       alignItems: "center",
 
       img: {
-        height: "3.5rem",
+        height: "45px",
         paddingRight: "5em",
         cursor: "pointer",
         "&:hover": {
