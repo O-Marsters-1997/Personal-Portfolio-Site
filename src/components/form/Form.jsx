@@ -137,13 +137,13 @@ const Form = () => {
           <Grid item xs={12}>
             <Box component="div" className="form-section-text">
               <Typography variant="body1">
-                If you have any questions or suggestions or have any ideas for
+                If you have any questions, suggestions or have any ideas for
                 how we can collaborate going forward, please let me know through
                 the comment form below.
               </Typography>
               <Typography variant="body1">
                 This will go straight to my inbox at
-                <span className="email-bold">olly.marsters@yahoo.co.uk</span>
+                <Box component = "span" className="email-bold">olly.marsters@yahoo.co.uk</Box>
               </Typography>
               <Typography variant="body1">
                 I’m always excited about sharing my passion for technology with

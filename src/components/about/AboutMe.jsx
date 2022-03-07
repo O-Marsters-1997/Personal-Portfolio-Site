@@ -9,6 +9,7 @@ import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
 
 const AboutMe = () => {
   const MyWrapper = styled("div")(({ theme }) => ({
+    marginTop: "5rem",
     color: theme.palette.text.primary,
     padding: "5rem 0",
 
@@ -66,6 +67,7 @@ const AboutMe = () => {
 
       "&:hover .profile-image-overlay": {
         backgroundColor: "transparent",
+        cursor: "pointer",
       },
       img: {
         width: "80%",
@@ -82,7 +84,7 @@ const AboutMe = () => {
         top: 0,
         bottom: 8,
         width: "80%",
-       
+
         borderRadius: "10px",
         backgroundColor: theme.palette.primary.overlay,
         transition: "background-color .5s ease-in",
@@ -102,7 +104,6 @@ const AboutMe = () => {
   }));
 
   const myRef = useRef();
-
 
   const options = {
     root: null,
@@ -207,13 +208,13 @@ const AboutMe = () => {
           <Box component="div">
             <Typography variant="body1">
               Hi, my name is Olly. Having graduated with a degree in
-              international relations, I decided to pursue software development
-              because of the transformational impact technology can have in
+              International Relations, I decided to pursue software development
+              because of the transformational impact technology can have on
               people's lives.
             </Typography>
             <Typography variant="body1">
-              I constantly strive to improve my skills and the love the process
-              of learning new things. My key ares of interest include
+              I constantly strive to improve my skills and love the process of
+              learning new things. My key ares of interest include
               <Box component="span">
                 UX, UI design, devops and full-stack web development
               </Box>
@@ -242,7 +243,10 @@ const AboutMe = () => {
         >
           <Box component="div" className="profile-image-container">
             <Box component="div" className="profile-image-wrapper">
-              <img src={PersonalProfileImage} alt="personal profile for Olly Marsters"></img>
+              <img
+                src={PersonalProfileImage}
+                alt="personal profile for Olly Marsters"
+              ></img>
               <Box component="div" className="profile-image-overlay"></Box>
               <Box component="div" className="profile-image-outline"></Box>
             </Box>
