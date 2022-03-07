@@ -32,7 +32,7 @@ const Footer = () => {
         justifySelf: "center",
         marginRight: ".35rem",
         fontSize: "1.2em",
-        transform: "translateY(-2.5px)",
+        transform: "translateY(-7.5px)",
         fontStyle: "normal",
         [theme.breakpoints.down("sm")]: {
           fontSize: ".95rem",
