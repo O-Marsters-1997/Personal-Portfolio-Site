@@ -1,15 +1,15 @@
-import React from 'react'
-import {Box} from "@mui/material"
-import AboutMe from '../components/about/AboutMe'
-import Skills from '../components/about/Skills'
+import React from "react";
+import { Box } from "@mui/material";
+import AboutMe from "../components/about/AboutMe";
+import Skills from "../components/about/Skills";
 
 const AboutContainer = () => {
-    return (
-        <div>
-            <AboutMe/>
-            <Skills/>
-        </div>
-    )
-}
+  return (
+    <Box component="div">
+      <AboutMe />
+      <Skills />
+    </Box>
+  );
+};
 
-export default AboutContainer
+export default AboutContainer;

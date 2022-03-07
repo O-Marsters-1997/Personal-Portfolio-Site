@@ -1,7 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { styled } from "@mui/system";
-import utils from "../../configJS/utils";
-import CanvasOverlay from "./CanvasOverlay";
 
 const Canvas = ({ theme }) => {
   useEffect(() => {
@@ -92,7 +90,6 @@ const Canvas = ({ theme }) => {
 
     // // Animation Loop
     let radians = 0;
-    let alpha = 1;
     function animate() {
       requestAnimationFrame(animate);
       c.fillStyle = "#1C202D";

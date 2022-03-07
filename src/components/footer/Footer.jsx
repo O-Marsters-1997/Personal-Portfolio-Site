@@ -1,7 +1,6 @@
 import React from "react";
 import { Box, Typography, Link } from "@mui/material";
 import { styled } from "@mui/system";
-import CopyrightIcon from "@mui/icons-material/Copyright";
 import GitHubIcon from "@mui/icons-material/GitHub";
 
 const Footer = () => {

@@ -1,16 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { useAnimation, motion } from "framer-motion";
 import { styled } from "@mui/system";
-import {
-  Grid,
-  Typography,
-  Box,
-  Paper,
-  List,
-  Link,
-  ListItem,
-  ListItemText,
-} from "@mui/material";
+import { Grid, Typography, Box, Paper, List, Link } from "@mui/material";
 import Github from "../../assets/images/github-white.svg";
 import External from "../../assets/images/external-white.svg";
 import HTML from "../../assets/images/html-white.svg";
@@ -100,8 +91,8 @@ const Projects = () => {
         },
         img: {
           marginRight: ".8rem",
-          height: "1.75rem",
-          width: "1.75rem",
+          height: "2.05rem",
+          width: "2.05rem",
           cursor: "pointer",
         },
       },
@@ -331,7 +322,7 @@ const Projects = () => {
           animate={leftAnimation}
         >
           <Grid item xs={12} md={6} className="project-item-wrapper-left">
-            <img src={Flask} className="project-item-image" />
+            <img src={Flask} alt="Flask cricket app" className="project-item-image" />
             <Box className="project-item-image-overlay">
               <Box className="project-item-overlay-text">
                 <Box className="project-item-heading-small">
@@ -384,11 +375,11 @@ const Projects = () => {
                   component="div"
                   className="project-item-icons-wrapper-small"
                 >
-                  <img src={HTML} alt="" />
-                  <img src={SASS} alt="" />
-                  <img src={PY} alt="" />
-                  <img src={FLASK} alt="" />
-                  <img src={PSQL} alt="" />
+                  <img src={HTML} alt="Html icon" />
+                  <img src={SASS} alt="Sass icon" />
+                  <img src={PY} alt="Python icon" />
+                  <img src={FLASK} alt="Flask icon" />
+                  <img src={PSQL} alt="Postgresql icon" />
                 </Box>
               </Box>
             </Box>
@@ -400,7 +391,13 @@ const Projects = () => {
               >
                 <img src={Github} alt="github-cons-to-source-code" />
               </Link>
-              {/* <img src={External} alt="external-icon-to-deployed-version" /> */}
+              <Link
+                href="https://cwc-insider.herokuapp.com/"
+                target="_blank"
+                rel="noopener"
+              >
+                <img src={External} alt="external-icon-to-deployed-version" />
+              </Link>
             </Box>
           </Grid>
 
@@ -412,7 +409,7 @@ const Projects = () => {
             <Paper elevation={12}>
               <List dense={true}>
                 <Box component="div" className="project-item-bullet-wrapper">
-                  <span className="project-item-bullet"></span>
+                  <Box component="span" className="project-item-bullet"></Box>
                   <Typography variant="body1" className="project-text">
                     Created an application for keeping track of the 2021 Cricket
                     World Cup.
@@ -426,7 +423,7 @@ const Projects = () => {
                   </Typography>
                 </Box>
                 <Box component="div" className="project-item-bullet-wrapper">
-                  <span className="project-item-bullet"></span>
+                  <Box component="span" className="project-item-bullet"></Box>
                   <Typography variant="body1" className="project-text">
                     Managed relational databases using PostgreSQL.
                   </Typography>
@@ -434,11 +431,11 @@ const Projects = () => {
               </List>
             </Paper>
             <Box component="div" className="project-item-icons-wrapper">
-              <img src={HTML} alt="" />
-              <img src={SASS} alt="" />
-              <img src={PY} alt="" />
-              <img src={FLASK} alt="" />
-              <img src={PSQL} alt="" />
+              <img src={HTML} alt="Html icon" />
+              <img src={SASS} alt="Sass icon" />
+              <img src={PY} alt="Python icon" />
+              <img src={FLASK} alt="Flask icon" />
+              <img src={PSQL} alt="Postgresql icon" />
             </Box>
           </Grid>
         </Grid>
@@ -453,7 +450,7 @@ const Projects = () => {
           animate={rightAnimation}
         >
           <Grid item xs={12} md={6} className="project-item-wrapper-left">
-            <img src={Sleigh} className="project-item-image" />
+            <img src={Sleigh} alt="BBC sleigh ride project" className="project-item-image" />
             <Box className="project-item-image-overlay">
               <Box className="project-item-overlay-text">
                 <Box className="project-item-heading-small">
@@ -466,7 +463,10 @@ const Projects = () => {
                       component="div"
                       className="project-item-bullet-wrapper"
                     >
-                      <span className="project-item-bullet"></span>
+                      <Box
+                        component="span"
+                        className="project-item-bullet"
+                      ></Box>
                       <Typography variant="body1" className="project-text">
                         Developed an educational application about how Christmas
                         is celebrated around the world.
@@ -476,7 +476,10 @@ const Projects = () => {
                       component="div"
                       className="project-item-bullet-wrapper"
                     >
-                      <span className="project-item-bullet"></span>
+                      <Box
+                        component="span"
+                        className="project-item-bullet"
+                      ></Box>
                       <Typography variant="body1" className="project-text">
                         API calls using non-relational databases and express
                         server configuration.
@@ -488,11 +491,11 @@ const Projects = () => {
                   component="div"
                   className="project-item-icons-wrapper-small"
                 >
-                  <img src={HTML} alt="" />
-                  <img src={CSS} alt="" />
-                  <img src={JS} alt="" />
-                  <img src={RE} alt="" />
-                  <img src={MON} alt="" />
+                  <img src={HTML} alt="Html icon" />
+                  <img src={CSS} alt="CSS icon" />
+                  <img src={JS} alt="Javascript icon" />
+                  <img src={RE} alt="React icon" />
+                  <img src={MON} alt="Mongo DB icon" />
                 </Box>
               </Box>
             </Box>
@@ -504,7 +507,13 @@ const Projects = () => {
               >
                 <img src={Github} alt="github-cons-to-source-code" />
               </Link>
-              {/* <img src={External} alt="external-icon-to-deployed-version" /> */}
+              <Link
+                href="https://musing-panini-a7dc6f.netlify.app"
+                target="_blank"
+                rel="noopener"
+              >
+                <img src={External} alt="external-icon-to-deployed-version" />
+              </Link>
             </Box>
           </Grid>
 
@@ -516,14 +525,14 @@ const Projects = () => {
             <Paper elevation={12}>
               <List dense={true}>
                 <Box component="div" className="project-item-bullet-wrapper">
-                  <span className="project-item-bullet"></span>
+                  <Box component="span" className="project-item-bullet"></Box>
                   <Typography variant="body1" className="project-text">
                     Developed an educational application about how Christmas is
                     celebrated around the world.
                   </Typography>
                 </Box>
                 <Box component="div" className="project-item-bullet-wrapper">
-                  <span className="project-item-bullet"></span>
+                  <Box component="span" className="project-item-bullet"></Box>
                   <Typography variant="body1" className="project-text">
                     API calls using non-relational databases and express server
                     configuration.
@@ -532,11 +541,11 @@ const Projects = () => {
               </List>
             </Paper>
             <Box component="div" className="project-item-icons-wrapper">
-              <img src={HTML} alt="" />
-              <img src={CSS} alt="" />
-              <img src={JS} alt="" />
-              <img src={RE} alt="" />
-              <img src={MON} alt="" />
+              <img src={HTML} alt="Html icon" />
+              <img src={CSS} alt="CSS icon" />
+              <img src={JS} alt="Javascript icon" />
+              <img src={RE} alt="React icon" />
+              <img src={MON} alt="Mongo DB icon" />
             </Box>
           </Grid>
         </Grid>
@@ -551,7 +560,11 @@ const Projects = () => {
           animate={left2Animation}
         >
           <Grid item xs={12} md={6} className="project-item-wrapper-left">
-            <img src={Clanhub} className="project-item-image" />
+            <img
+              src={Clanhub}
+              alt="Clanhub Porject"
+              className="project-item-image"
+            />
             <Box className="project-item-image-overlay">
               <Box className="project-item-overlay-text">
                 <Box className="project-item-heading-small">
@@ -592,11 +605,11 @@ const Projects = () => {
                   component="div"
                   className="project-item-icons-wrapper-small"
                 >
-                  <img src={SASS} alt="" />
-                  <img src={JAV} alt="" />
-                  <img src={SPR} alt="" />
-                  <img src={RE} alt="" />
-                  <img src={FIRE} alt="" />
+                  <img src={SASS} alt="Sass icon" />
+                  <img src={JAV} alt="Javascript icon" />
+                  <img src={SPR} alt="Spring icon" />
+                  <img src={RE} alt="React icon" />
+                  <img src={FIRE} alt="Firebase icon" />
                 </Box>
               </Box>
             </Box>
@@ -636,11 +649,11 @@ const Projects = () => {
               </List>
             </Paper>
             <Box component="div" className="project-item-icons-wrapper">
-              <img src={SASS} alt="" />
-              <img src={JAV} alt="" />
-              <img src={SPR} alt="" />
-              <img src={RE} alt="" />
-              <img src={FIRE} alt="" />
+              <img src={SASS} alt="Sass icon" />
+              <img src={JAV} alt="Java icon icon" />
+              <img src={SPR} alt="Spring icon" />
+              <img src={RE} alt="React icon" />
+              <img src={FIRE} alt="Fireabse icon" />
             </Box>
           </Grid>
         </Grid>

@@ -1,17 +1,8 @@
-import React, { useEffect, useRef, useState } from "react";
+import React from "react";
 import emailjs from "emailjs-com";
-import { useInView } from "react-intersection-observer";
 import { useAnimation, motion } from "framer-motion";
 import { styled } from "@mui/system";
-import {
-  Grid,
-  Typography,
-  Box,
-  FormGroup,
-  TextField,
-  Button,
-} from "@mui/material";
-import TextareaAutosize from "@mui/base/TextareaAutosize";
+import { Grid, Typography, Box, Button } from "@mui/material";
 
 const Form = () => {
   const MyWrapper = styled("div")(({ theme }) => ({
@@ -91,12 +82,6 @@ const Form = () => {
     },
   }));
 
-  const options = {
-    root: null,
-    rootMargin: "0px",
-    threshold: 0.3,
-  };
-
   const variants = {
     formStart: { scale: 0.4, opacity: 0, y: 100 },
     formEnd: {
@@ -116,7 +101,6 @@ const Form = () => {
   };
 
   const animation = useAnimation();
-  const titleAnimation = useAnimation();
 
   const sendEmail = (e) => {
     console.log("hello");

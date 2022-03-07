@@ -1,19 +1,10 @@
-import React, { useState } from "react";
-import useMediaQuery from "@mui/material/useMediaQuery";
+import React from "react";
 import { Link } from "react-scroll";
 import { Box, Typography, Button } from "@mui/material";
-import { bgcolor, styled } from "@mui/system";
-import { AbcRounded } from "@mui/icons-material";
+import { styled } from "@mui/system";
 import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
 
-const CanvasOverlay = ({}) => {
-  const [arrowToggle, setArrowToggle] = useState(false);
-
-  const handleToggle = () => {
-    setArrowToggle(!arrowToggle);
-  };
-
-  const goToLink = () => {};
+const CanvasOverlay = () => {
 
   const TitleWrapper = styled("div")(({ theme }) => ({
     position: "absolute",

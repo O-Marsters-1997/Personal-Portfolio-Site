@@ -1,5 +1,5 @@
-import React, { useState, useRef, useEffect } from "react";
-import { animate, useAnimation } from "framer-motion";
+import React, { useRef, useEffect } from "react";
+import { useAnimation } from "framer-motion";
 import { Box, Typography, Grid } from "@mui/material";
 import { styled } from "@mui/system";
 import { Link } from "react-scroll";
@@ -103,7 +103,6 @@ const AboutMe = () => {
 
   const myRef = useRef();
 
-  const [initial, setInitial] = useState(true);
 
   const options = {
     root: null,
@@ -243,7 +242,7 @@ const AboutMe = () => {
         >
           <Box component="div" className="profile-image-container">
             <Box component="div" className="profile-image-wrapper">
-              <img src={PersonalProfileImage}></img>
+              <img src={PersonalProfileImage} alt="personal profile for Olly Marsters"></img>
               <Box component="div" className="profile-image-overlay"></Box>
               <Box component="div" className="profile-image-outline"></Box>
             </Box>

@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from "react";
-import { Box, Typography, Grid, Button } from "@mui/material";
+import { Box, Typography, Grid } from "@mui/material";
 import { styled } from "@mui/system";
 import { motion, useAnimation } from "framer-motion";
 import HTML from "../../assets/images/html-white.svg";
@@ -14,8 +14,6 @@ import SPR from "../../assets/images/spring-white.svg";
 import PSQL from "../../assets/images/postgresql-white.svg";
 import GIT from "../../assets/images/git-white.svg";
 import LIN from "../../assets/images/linux-white.svg";
-import FLASK from "../../assets/images/flask-white.svg";
-
 const Skills = () => {
   const MySkills = styled("div")(({ theme }) => ({
     backgroundColor: theme.palette.primary.main,
@@ -114,73 +112,121 @@ const Skills = () => {
           >
             <Grid item xs={6} sm={4} md={3}>
               <Box className="skills-grid-item">
-                <img src={HTML} className="skills-grid-image"></img>
+                <img
+                  src={HTML}
+                  alt="HTML skill"
+                  className="skills-grid-image"
+                ></img>
                 <Typography variant="subtitle2">Html</Typography>
               </Box>
             </Grid>
             <Grid item xs={6} sm={4} md={3}>
               <Box className="skills-grid-item">
-                <img src={CSS} className="skills-grid-image"></img>
+                <img
+                  src={CSS}
+                  alt="CSS skill"
+                  className="skills-grid-image"
+                ></img>
                 <Typography variant="subtitle2">Css</Typography>
               </Box>
             </Grid>
             <Grid item xs={6} sm={4} md={3}>
               <Box className="skills-grid-item">
-                <img src={JS} className="skills-grid-image"></img>
+                <img
+                  src={JS}
+                  alt="Javascript skill"
+                  className="skills-grid-image"
+                ></img>
                 <Typography variant="subtitle2">Javascript</Typography>
               </Box>
             </Grid>
             <Grid item xs={6} sm={4} md={3}>
               <Box className="skills-grid-item">
-                <img src={SASS} className="skills-grid-image"></img>
+                <img
+                  src={SASS}
+                  alt="SASS skill"
+                  className="skills-grid-image"
+                ></img>
                 <Typography variant="subtitle2">Sass</Typography>
               </Box>
             </Grid>
             <Grid item xs={6} sm={4} md={3}>
               <Box className="skills-grid-item">
-                <img src={RE} className="skills-grid-image"></img>
+                <img
+                  src={RE}
+                  alt="React skill"
+                  className="skills-grid-image"
+                ></img>
                 <Typography variant="subtitle2">React</Typography>
               </Box>
             </Grid>
             <Grid item xs={6} sm={4} md={3}>
               <Box className="skills-grid-item">
-                <img src={FIRE} className="skills-grid-image"></img>
+                <img
+                  src={FIRE}
+                  alt="Firebase skill"
+                  className="skills-grid-image"
+                ></img>
                 <Typography variant="subtitle2">Firebase</Typography>
               </Box>
             </Grid>
             <Grid item xs={6} sm={4} md={3}>
               <Box className="skills-grid-item">
-                <img src={PY} className="skills-grid-image"></img>
+                <img
+                  src={PY}
+                  alt="Python skill"
+                  className="skills-grid-image"
+                ></img>
                 <Typography variant="subtitle2">Python</Typography>
               </Box>
             </Grid>
             <Grid item xs={6} sm={4} md={3}>
               <Box className="skills-grid-item">
-                <img src={JAVA} className="skills-grid-image"></img>
+                <img
+                  src={JAVA}
+                  alt="Java skill"
+                  className="skills-grid-image"
+                ></img>
                 <Typography variant="subtitle2">Java</Typography>
               </Box>
             </Grid>
             <Grid item xs={6} sm={4} md={3}>
               <Box className="skills-grid-item">
-                <img src={SPR} className="skills-grid-image"></img>
+                <img
+                  src={SPR}
+                  alt="Spring skill"
+                  className="skills-grid-image"
+                ></img>
                 <Typography variant="subtitle2">Spring</Typography>
               </Box>
             </Grid>
             <Grid item xs={6} sm={4} md={3}>
               <Box className="skills-grid-item">
-                <img src={PSQL} className="skills-grid-image"></img>
+                <img
+                  src={PSQL}
+                  alt="PostgreSQL skill"
+                  className="skills-grid-image"
+                ></img>
                 <Typography variant="subtitle2">PostgreSQL</Typography>
               </Box>
             </Grid>
             <Grid item xs={6} sm={4} md={3}>
               <Box className="skills-grid-item">
-                <img src={GIT} className="skills-grid-image"></img>
+                <img
+                  src={GIT}
+                  alt="Git skill"
+                  className="skills-grid-image"
+                ></img>
                 <Typography variant="subtitle2">Git</Typography>
               </Box>
             </Grid>
             <Grid item xs={6} sm={4} md={3}>
               <Box className="skills-grid-item">
-                <img src={LIN} className="skills-grid-image"></img>
+                <img
+                  src={LIN}
+                  alt="Linux skill"
+                  className="skills-grid-image"
+                ></img>
                 <Typography variant="subtitle2">Linux</Typography>
               </Box>
             </Grid>

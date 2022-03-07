@@ -1,7 +1,6 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 
 import "./styles/css/style.css";
-import { Route, Routes } from "react-router-dom";
 import theme from "./theme";
 import Navbar from "./components/navbar/Navbar";
 import MenuSmall from "./components/navbar/MenuSmall";
@@ -10,20 +9,19 @@ import AboutContainer from "./containers/AboutContainer";
 import Projects from "./components/projects/Projects";
 import Form from "./components/form/Form";
 import Footer from "./components/footer/Footer";
-import { ThemeProvider, Grid, CssBaseline, Typography } from "@mui/material";
-import { ConstructionOutlined, CoPresentOutlined } from "@mui/icons-material";
+import { ThemeProvider, CssBaseline, Box } from "@mui/material";
 
 function App() {
   const [mobileMenu, setMobileMenu] = useState(false);
-  const [width, setWidth] = useState(window.innerWidth)
+  const [width, setWidth] = useState(window.innerWidth);
 
- useEffect(() => {
-   window.addEventListener("resize", ()=> {
-     if (window.innerWidth <= 450) {
-      setWidth(window.innerWidth);
-     }
-   })
- })
+  useEffect(() => {
+    window.addEventListener("resize", () => {
+      if (window.innerWidth <= 450) {
+        setWidth(window.innerWidth);
+      }
+    });
+  });
 
   useEffect(() => {
     let hamburgerLine = document.getElementById("hamburger-line");
@@ -49,7 +47,7 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <div className="App">
+      <Box component="div" className="App">
         <CanvasContainer theme={theme} />
         <Navbar
           mobileMenu={mobileMenu}
@@ -66,7 +64,7 @@ function App() {
             <Footer />
           </>
         ) : null}
-      </div>
+      </Box>
     </ThemeProvider>
   );
 }

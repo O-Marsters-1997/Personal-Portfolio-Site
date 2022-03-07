@@ -1,16 +1,7 @@
 import React, { useEffect } from "react";
-import {
-  AppBar,
-  Toolbar,
-  IconButton,
-  Typography,
-  Button,
-  Box,
-  Link,
-} from "@mui/material";
-import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
-import { bgcolor, styled } from "@mui/system";
-import MenuIcon from "@mui/icons-material/Menu";
+import { Typography, Button, Box, Link } from "@mui/material";
+import { Link as ScrollLink } from "react-scroll";
+import { styled } from "@mui/system";
 import Hamburger from "./Hamburger";
 import Github from "../../assets/images/github-white.svg";
 import Linkedin from "../../assets/images/linkedin.svg";
@@ -94,8 +85,6 @@ const Navbar = ({ mobileMenu, onMobileClick }) => {
     observer.observe(welcomePage);
   };
 
-  const scrollIntoView = () => {};
-
   return (
     <Box onClick={navChange}>
       <Box sx={{ mt: "-30px", boxShadow: "none" }}>
@@ -106,18 +95,18 @@ const Navbar = ({ mobileMenu, onMobileClick }) => {
               target="_blank"
               rel="noopener"
             >
-              <img src={Github}></img>
+              <img src={Github} alt="Github main page"></img>
             </Link>
             <Link
               href="https://www.linkedin.com/in/olly-marsters/"
               target="_blank"
               rel="noopener"
             >
-              <img src={Linkedin}></img>
+              <img src={Linkedin} alt="Linkedin main page"></img>
             </Link>
           </Box>
           <Box component="div" className="nav-wrapper">
-            <ScrollLink to="about" smooth={true} duration={1500} >
+            <ScrollLink to="about" smooth={true} duration={1500}>
               <Typography variant="h5">about</Typography>
             </ScrollLink>
             <Typography variant="h5">
