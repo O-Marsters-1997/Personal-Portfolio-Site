@@ -322,7 +322,11 @@ const Projects = () => {
           animate={leftAnimation}
         >
           <Grid item xs={12} md={6} className="project-item-wrapper-left">
-            <img src={Flask} alt="Flask cricket app" className="project-item-image" />
+            <img
+              src={Flask}
+              alt="Flask cricket app"
+              className="project-item-image"
+            />
             <Box className="project-item-image-overlay">
               <Box className="project-item-overlay-text">
                 <Box className="project-item-heading-small">
@@ -450,7 +454,11 @@ const Projects = () => {
           animate={rightAnimation}
         >
           <Grid item xs={12} md={6} className="project-item-wrapper-left">
-            <img src={Sleigh} alt="BBC sleigh ride project" className="project-item-image" />
+            <img
+              src={Sleigh}
+              alt="BBC sleigh ride project"
+              className="project-item-image"
+            />
             <Box className="project-item-image-overlay">
               <Box className="project-item-overlay-text">
                 <Box className="project-item-heading-small">
