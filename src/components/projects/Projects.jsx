@@ -17,7 +17,7 @@ import SPR from "../../assets/images/spring-white.svg";
 import FIRE from "../../assets/images/firebase-white.svg";
 import FLASK from "../../assets/images/flask-white.svg";
 import Flask from "../../assets/images/flask.png";
-import Sleigh from "../../assets/images/react.png";
+import Sleigh from "../../assets/images/react.jpg";
 import Clanhub from "../../assets/images/clanhub.png";
 
 const Projects = () => {
