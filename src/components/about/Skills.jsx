@@ -1,4 +1,6 @@
 import React, { useRef, useEffect } from "react";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 import { Box, Typography, Grid } from "@mui/material";
 import { styled } from "@mui/system";
 import { motion, useAnimation } from "framer-motion";
@@ -112,121 +114,121 @@ const Skills = () => {
           >
             <Grid item xs={6} sm={4} md={3}>
               <Box className="skills-grid-item">
-                <img
+                <LazyLoadImage
                   src={HTML}
                   alt="HTML skill"
                   className="skills-grid-image"
-                ></img>
+                ></LazyLoadImage>
                 <Typography variant="subtitle2">Html</Typography>
               </Box>
             </Grid>
             <Grid item xs={6} sm={4} md={3}>
               <Box className="skills-grid-item">
-                <img
+                <LazyLoadImage
                   src={CSS}
                   alt="CSS skill"
                   className="skills-grid-image"
-                ></img>
+                ></LazyLoadImage>
                 <Typography variant="subtitle2">Css</Typography>
               </Box>
             </Grid>
             <Grid item xs={6} sm={4} md={3}>
               <Box className="skills-grid-item">
-                <img
+                <LazyLoadImage
                   src={JS}
                   alt="Javascript skill"
                   className="skills-grid-image"
-                ></img>
+                ></LazyLoadImage>
                 <Typography variant="subtitle2">Javascript</Typography>
               </Box>
             </Grid>
             <Grid item xs={6} sm={4} md={3}>
               <Box className="skills-grid-item">
-                <img
+                <LazyLoadImage
                   src={SASS}
                   alt="SASS skill"
                   className="skills-grid-image"
-                ></img>
+                ></LazyLoadImage>
                 <Typography variant="subtitle2">Sass</Typography>
               </Box>
             </Grid>
             <Grid item xs={6} sm={4} md={3}>
               <Box className="skills-grid-item">
-                <img
+                <LazyLoadImage
                   src={RE}
                   alt="React skill"
                   className="skills-grid-image"
-                ></img>
+                ></LazyLoadImage>
                 <Typography variant="subtitle2">React</Typography>
               </Box>
             </Grid>
             <Grid item xs={6} sm={4} md={3}>
               <Box className="skills-grid-item">
-                <img
+                <LazyLoadImage
                   src={FIRE}
                   alt="Firebase skill"
                   className="skills-grid-image"
-                ></img>
+                ></LazyLoadImage>
                 <Typography variant="subtitle2">Firebase</Typography>
               </Box>
             </Grid>
             <Grid item xs={6} sm={4} md={3}>
               <Box className="skills-grid-item">
-                <img
+                <LazyLoadImage
                   src={PY}
                   alt="Python skill"
                   className="skills-grid-image"
-                ></img>
+                ></LazyLoadImage>
                 <Typography variant="subtitle2">Python</Typography>
               </Box>
             </Grid>
             <Grid item xs={6} sm={4} md={3}>
               <Box className="skills-grid-item">
-                <img
+                <LazyLoadImage
                   src={JAVA}
                   alt="Java skill"
                   className="skills-grid-image"
-                ></img>
+                ></LazyLoadImage>
                 <Typography variant="subtitle2">Java</Typography>
               </Box>
             </Grid>
             <Grid item xs={6} sm={4} md={3}>
               <Box className="skills-grid-item">
-                <img
+                <LazyLoadImage
                   src={SPR}
                   alt="Spring skill"
                   className="skills-grid-image"
-                ></img>
+                ></LazyLoadImage>
                 <Typography variant="subtitle2">Spring</Typography>
               </Box>
             </Grid>
             <Grid item xs={6} sm={4} md={3}>
               <Box className="skills-grid-item">
-                <img
+                <LazyLoadImage
                   src={PSQL}
                   alt="PostgreSQL skill"
                   className="skills-grid-image"
-                ></img>
+                ></LazyLoadImage>
                 <Typography variant="subtitle2">PostgreSQL</Typography>
               </Box>
             </Grid>
             <Grid item xs={6} sm={4} md={3}>
               <Box className="skills-grid-item">
-                <img
+                <LazyLoadImage
                   src={GIT}
                   alt="Git skill"
                   className="skills-grid-image"
-                ></img>
+                ></LazyLoadImage>
                 <Typography variant="subtitle2">Git</Typography>
               </Box>
             </Grid>
             <Grid item xs={6} sm={4} md={3}>
               <Box className="skills-grid-item">
-                <img
+                <LazyLoadImage
                   src={LIN}
                   alt="Linux skill"
                   className="skills-grid-image"
-                ></img>
+                ></LazyLoadImage>
                 <Typography variant="subtitle2">Linux</Typography>
               </Box>
             </Grid>

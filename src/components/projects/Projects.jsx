@@ -1,4 +1,6 @@
 import React, { useEffect, useRef } from "react";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 import { useAnimation, motion } from "framer-motion";
 import { styled } from "@mui/system";
 import { Grid, Typography, Box, Paper, List, Link } from "@mui/material";
@@ -322,7 +324,7 @@ const Projects = () => {
           animate={leftAnimation}
         >
           <Grid item xs={12} md={6} className="project-item-wrapper-left">
-            <img
+            <LazyLoadImage
               src={Flask}
               alt="Flask cricket app"
               className="project-item-image"
@@ -379,11 +381,11 @@ const Projects = () => {
                   component="div"
                   className="project-item-icons-wrapper-small"
                 >
-                  <img src={HTML} alt="Html icon" />
-                  <img src={SASS} alt="Sass icon" />
-                  <img src={PY} alt="Python icon" />
-                  <img src={FLASK} alt="Flask icon" />
-                  <img src={PSQL} alt="Postgresql icon" />
+                  <LazyLoadImage src={HTML} alt="Html icon" />
+                  <LazyLoadImage src={SASS} alt="Sass icon" />
+                  <LazyLoadImage src={PY} alt="Python icon" />
+                  <LazyLoadImage src={FLASK} alt="Flask icon" />
+                  <LazyLoadImage src={PSQL} alt="Postgresql icon" />
                 </Box>
               </Box>
             </Box>
@@ -393,14 +395,17 @@ const Projects = () => {
                 target="_blank"
                 rel="noopener"
               >
-                <img src={Github} alt="github-cons-to-source-code" />
+                <LazyLoadImage src={Github} alt="github-cons-to-source-code" />
               </Link>
               <Link
                 href="https://cwc-insider.herokuapp.com/"
                 target="_blank"
                 rel="noopener"
               >
-                <img src={External} alt="external-icon-to-deployed-version" />
+                <LazyLoadImage
+                  src={External}
+                  alt="external-icon-to-deployed-version"
+                />
               </Link>
             </Box>
           </Grid>
@@ -435,11 +440,11 @@ const Projects = () => {
               </List>
             </Paper>
             <Box component="div" className="project-item-icons-wrapper">
-              <img src={HTML} alt="Html icon" />
-              <img src={SASS} alt="Sass icon" />
-              <img src={PY} alt="Python icon" />
-              <img src={FLASK} alt="Flask icon" />
-              <img src={PSQL} alt="Postgresql icon" />
+              <LazyLoadImage src={HTML} alt="Html icon" />
+              <LazyLoadImage src={SASS} alt="Sass icon" />
+              <LazyLoadImage src={PY} alt="Python icon" />
+              <LazyLoadImage src={FLASK} alt="Flask icon" />
+              <LazyLoadImage src={PSQL} alt="Postgresql icon" />
             </Box>
           </Grid>
         </Grid>
@@ -454,7 +459,7 @@ const Projects = () => {
           animate={rightAnimation}
         >
           <Grid item xs={12} md={6} className="project-item-wrapper-left">
-            <img
+            <LazyLoadImage
               src={Sleigh}
               alt="BBC sleigh ride project"
               className="project-item-image"
@@ -499,11 +504,11 @@ const Projects = () => {
                   component="div"
                   className="project-item-icons-wrapper-small"
                 >
-                  <img src={HTML} alt="Html icon" />
-                  <img src={CSS} alt="CSS icon" />
-                  <img src={JS} alt="Javascript icon" />
-                  <img src={RE} alt="React icon" />
-                  <img src={MON} alt="Mongo DB icon" />
+                  <LazyLoadImage src={HTML} alt="Html icon" />
+                  <LazyLoadImage src={CSS} alt="CSS icon" />
+                  <LazyLoadImage src={JS} alt="Javascript icon" />
+                  <LazyLoadImage src={RE} alt="React icon" />
+                  <LazyLoadImage src={MON} alt="Mongo DB icon" />
                 </Box>
               </Box>
             </Box>
@@ -513,14 +518,17 @@ const Projects = () => {
                 target="_blank"
                 rel="noopener"
               >
-                <img src={Github} alt="github-cons-to-source-code" />
+                <LazyLoadImage src={Github} alt="github-cons-to-source-code" />
               </Link>
               <Link
                 href="https://musing-panini-a7dc6f.netlify.app"
                 target="_blank"
                 rel="noopener"
               >
-                <img src={External} alt="external-icon-to-deployed-version" />
+                <LazyLoadImage
+                  src={External}
+                  alt="external-icon-to-deployed-version"
+                />
               </Link>
             </Box>
           </Grid>
@@ -549,11 +557,11 @@ const Projects = () => {
               </List>
             </Paper>
             <Box component="div" className="project-item-icons-wrapper">
-              <img src={HTML} alt="Html icon" />
-              <img src={CSS} alt="CSS icon" />
-              <img src={JS} alt="Javascript icon" />
-              <img src={RE} alt="React icon" />
-              <img src={MON} alt="Mongo DB icon" />
+              <LazyLoadImage src={HTML} alt="Html icon" />
+              <LazyLoadImage src={CSS} alt="CSS icon" />
+              <LazyLoadImage src={JS} alt="Javascript icon" />
+              <LazyLoadImage src={RE} alt="React icon" />
+              <LazyLoadImage src={MON} alt="Mongo DB icon" />
             </Box>
           </Grid>
         </Grid>
@@ -568,7 +576,7 @@ const Projects = () => {
           animate={left2Animation}
         >
           <Grid item xs={12} md={6} className="project-item-wrapper-left">
-            <img
+            <LazyLoadImage
               src={Clanhub}
               alt="Clanhub Porject"
               className="project-item-image"
@@ -613,11 +621,11 @@ const Projects = () => {
                   component="div"
                   className="project-item-icons-wrapper-small"
                 >
-                  <img src={SASS} alt="Sass icon" />
-                  <img src={JAV} alt="Javascript icon" />
-                  <img src={SPR} alt="Spring icon" />
-                  <img src={RE} alt="React icon" />
-                  <img src={FIRE} alt="Firebase icon" />
+                  <LazyLoadImage src={SASS} alt="Sass icon" />
+                  <LazyLoadImage src={JAV} alt="Javascript icon" />
+                  <LazyLoadImage src={SPR} alt="Spring icon" />
+                  <LazyLoadImage src={RE} alt="React icon" />
+                  <LazyLoadImage src={FIRE} alt="Firebase icon" />
                 </Box>
               </Box>
             </Box>
@@ -627,9 +635,9 @@ const Projects = () => {
                 target="_blank"
                 rel="noopener"
               >
-                <img src={Github} alt="github-cons-to-source-code" />
+                <LazyLoadImage src={Github} alt="github-cons-to-source-code" />
               </Link>
-              {/* <img src={External} alt="external-icon-to-deployed-version" /> */}
+              {/* <LazyLoadImage src={External} alt="external-icon-to-deployed-version" /> */}
             </Box>
           </Grid>
 
@@ -657,11 +665,11 @@ const Projects = () => {
               </List>
             </Paper>
             <Box component="div" className="project-item-icons-wrapper">
-              <img src={SASS} alt="Sass icon" />
-              <img src={JAV} alt="Java icon icon" />
-              <img src={SPR} alt="Spring icon" />
-              <img src={RE} alt="React icon" />
-              <img src={FIRE} alt="Fireabse icon" />
+              <LazyLoadImage src={SASS} alt="Sass icon" />
+              <LazyLoadImage src={JAV} alt="Java icon icon" />
+              <LazyLoadImage src={SPR} alt="Spring icon" />
+              <LazyLoadImage src={RE} alt="React icon" />
+              <LazyLoadImage src={FIRE} alt="Fireabse icon" />
             </Box>
           </Grid>
         </Grid>

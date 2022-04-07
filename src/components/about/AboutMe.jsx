@@ -6,6 +6,8 @@ import { Link } from "react-scroll";
 import { motion } from "framer-motion";
 import PersonalProfileImage from "../../assets/images/PersonalProfileImage.jpg";
 import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 const AboutMe = () => {
   const MyWrapper = styled("div")(({ theme }) => ({
@@ -243,10 +245,10 @@ const AboutMe = () => {
         >
           <Box component="div" className="profile-image-container">
             <Box component="div" className="profile-image-wrapper">
-              <img
+              <LazyLoadImage
                 src={PersonalProfileImage}
                 alt="personal profile for Olly Marsters"
-              ></img>
+              ></LazyLoadImage>
               <Box component="div" className="profile-image-overlay"></Box>
               <Box component="div" className="profile-image-outline"></Box>
             </Box>
