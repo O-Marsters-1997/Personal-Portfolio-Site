@@ -74,7 +74,7 @@ const Canvas = ({ theme }) => {
       particles = [];
       let numParticles;
 
-      canvas.width > 450 ? (numParticles = 400) : (numParticles = 75);
+      canvas.width > 450 ? (numParticles = 400) : (numParticles = 5);
 
       for (let i = 0; i < numParticles; i++) {
         const canvasWidth = canvas.width + canvas.width / 2;
