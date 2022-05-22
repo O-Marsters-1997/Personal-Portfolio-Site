@@ -183,7 +183,7 @@ const AboutMe = () => {
     }, options);
     observer.observe(myRef.current);
   });
-
+// Test writing
   return (
     <MyWrapper id="about">
       <Grid ref={myRef} container spacing={2}>
